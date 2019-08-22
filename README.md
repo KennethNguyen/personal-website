@@ -1,6 +1,6 @@
 # My Personal Website
 
-## [KennethNguyen.me](KennethNguyen.me)
+## [KennethNguyen.me](http://www.KennethNguyen.me)
 
 ---
 
