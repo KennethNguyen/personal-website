@@ -1,0 +1,53 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    margin: 0px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.header {
+    flex: 1;
+    background-color: black;
+    opacity: 0.85;
+    text-align: center;
+    vertical-align: center;
+    color: white;
+}
+
+.intro {
+    padding: 10%;
+}
+
+.navElements {
+    list-style: none;
+    padding: 10%;
+}
+
+li {
+    font-size: 20px;
+    padding: 10px;
+}
+
+li:hover {
+    background-color: salmon;
+    cursor: pointer;
+}
+
+a .fa {
+    color: white;
+}
+
+.fa {
+    padding: 5%;
+}
+
+.fa:hover {
+    text-shadow: 0px 0px 26px silver;
+}
+
+.showcase {
+    flex: 3;
+    background-color: gray;
+    text-align: center;
+    color: white;
+}
