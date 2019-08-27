@@ -1,3 +1,5 @@
+/* Look into refactoring css code */
+
 body {
     display: flex;
     min-height: 100vh;
@@ -47,7 +49,43 @@ a .fa {
 
 .showcase {
     flex: 3;
-    background-color: gray;
     text-align: center;
     color: white;
+    opacity: 0.9;
+    overflow: auto;
+}
+
+/* About Me */
+.aboutGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    margin: 15px;
+}
+
+.aboutElement {
+    border: 2px solid white;
+    border-radius: 16px;
+}
+
+#personalSelf {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+
+#hobbies {
+    grid-column: 1 / 3;
+    grid-row: 3 / 5;
+}
+
+#topGames {
+    grid-column: 3 / 5;
+    grid-row: 1 / 5;
+}
+
+.aboutText {
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: left;
+    font-size: 18px;
 }

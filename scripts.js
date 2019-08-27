@@ -4,7 +4,10 @@ import {contactMe} from './contactMe.js';
 import {clearContent} from './clearContent.js';
 
 // Display projects page upon load
-projects();
+//projects();
+
+// Line below is element that is currently WIP 
+aboutMe();
 
 document.getElementById('project').addEventListener('click', function () {
     clearContent();
