@@ -7,7 +7,7 @@ import {clearContent} from './clearContent.js';
 //projects();
 
 // Line below is element that is currently WIP 
-aboutMe();
+contactMe();
 
 document.getElementById('project').addEventListener('click', function () {
     clearContent();
