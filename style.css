@@ -94,3 +94,20 @@ a .fa {
     text-align: left;
     font-size: 18px;
 }
+
+/* Resume */
+.userLinks {
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.linkItem {
+    font-size: 18px;
+}
+
+.linkItem:hover {
+    text-decoration: underline;
+}

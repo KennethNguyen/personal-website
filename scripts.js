@@ -19,9 +19,7 @@ document.getElementById('about').addEventListener('click', function () {
     aboutMe();
 });
 
-/* WIP, goal is to get the resume tab a section of its own and display the resume and have a download link
 document.getElementById('resume').addEventListener('click', function () {
     clearContent();
     resume();
 });
-*/
