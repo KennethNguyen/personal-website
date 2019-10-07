@@ -111,3 +111,22 @@ a .fa {
 .linkItem:hover {
     text-decoration: underline;
 }
+
+/* Projects */
+.projectsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid white;
+}
+
+.projectItem {
+    padding: 20px;
+}
+
+.projectLink {
+    justify-content: space-between;
+}
+
+.projectLink:hover {
+    text-decoration: underline;
+}
