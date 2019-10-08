@@ -1,3 +1,5 @@
+// Chop up project components instead of making one big file probably
+
 const projects = () => {
     // Change background of Projects section to a shade of black - River Bed
     (document.querySelector('.showcase')).style.backgroundColor = "#444d56";
@@ -9,18 +11,36 @@ const projects = () => {
     const sectionTitle = document.createElement('h1');
     sectionTitle.innerHTML = 'Projects';
 
-    const projectsGrid = document.createElement('div');
-    projectsGrid.classList.add('projectsGrid');
+    const projectsFlexContainer = document.createElement('div');
+    projectsFlexContainer.classList.add('projectsFlexContainer');
 
     // Todo List Element
     const todoProject = document.createElement('div');
-    todoProject.classList.add('todoProject', 'projectItem');
+    todoProject.classList.add('projectItem');
+
+    // Todo Left Section (Image)
+    const todoLeftSection = document.createElement('div');
+    todoLeftSection.classList.add('leftSection');
+
+    const todoImage = document.createElement('img');
+    todoImage.src = "./images/exampleTodo.png";
+    todoImage.width = 750;
+    todoImage.height = 500;
+
+    todoLeftSection.append(todoImage);
+
+    // Todo Right Section (Title, Description, Utilized, Links)
+    const todoRightSection = document.createElement('div');
+    todoRightSection.classList.add('rightSection');
 
     const todoTitle = document.createElement('h2');
     todoTitle.innerHTML = 'Todo List';
 
     const todoDescription = document.createElement('p');
-    todoDescription.innerHTML = 'A todo list'
+    todoDescription.innerHTML = 'A todo list for users to add tasks to a list and keep track of which tasks need to be done'
+
+    const todoLinks = document.createElement('div');
+    todoLinks.classList.add('todoLinks');
 
     const todoLive = document.createElement('a');
     todoLive.classList.add('projectLink');
@@ -34,17 +54,38 @@ const projects = () => {
     todoCode.target = '_blank';
     todoCode.innerHTML = 'Source Code';
 
-    todoProject.append(todoTitle, todoDescription, todoLive, todoCode);
+    todoLinks.append(todoLive, todoCode);
+    todoRightSection.append(todoTitle, todoDescription, todoLinks);
+
+    todoProject.append(todoLeftSection, todoRightSection);
 
     // Weather App Element
     const weatherProject = document.createElement('div');
-    weatherProject.classList.add('weatherProject', 'projectItem');
+    weatherProject.classList.add('projectItem');
+
+    // Weather Left Section (Image)
+    const weatherLeftSection = document.createElement('div');
+    weatherLeftSection.classList.add('leftSection');
+
+    const weatherImage = document.createElement('img');
+    weatherImage.src = "./images/exampleWeather.png";
+    weatherImage.width = 750;
+    weatherImage.height = 500;
+
+    weatherLeftSection.append(weatherImage);
+
+    // Weather Right Section (Title, Description, Utilized, Links)
+    const weatherRightSection = document.createElement('div');
+    weatherRightSection.classList.add('rightSection');
 
     const weatherTitle = document.createElement('h2');
     weatherTitle.innerHTML = 'Weather';
 
     const weatherDescription = document.createElement('p');
-    weatherDescription.innerHTML = 'A weather app'
+    weatherDescription.innerHTML = 'A weather app to determine the weather of any place in the world using OpenWeatherMap API'
+
+    const weatherLinks = document.createElement('div');
+    weatherLinks.classList.add('weatherLinks');
 
     const weatherLive = document.createElement('a');
     weatherLive.classList.add('projectLink');
@@ -58,17 +99,38 @@ const projects = () => {
     weatherCode.target = '_blank';
     weatherCode.innerHTML = 'Source Code';
 
-    weatherProject.append(weatherTitle, weatherDescription, weatherLive, weatherCode);
+    weatherLinks.append(weatherLive, weatherCode);
+    weatherRightSection.append(weatherTitle, weatherDescription, weatherLinks);
+    
+    weatherProject.append(weatherLeftSection, weatherRightSection);
 
     // Library Element
     const libraryProject = document.createElement('div');
-    libraryProject.classList.add('libraryProject', 'projectItem');
+    libraryProject.classList.add('projectItem');
+
+    // Library Left Section (Image)
+    const libraryLeftSection = document.createElement('div');
+    libraryLeftSection.classList.add('leftSection');
+
+    const libraryImage = document.createElement('img');
+    libraryImage.src = "./images/exampleLibrary.png";
+    libraryImage.width = 750;
+    libraryImage.height = 500;
+
+    libraryLeftSection.append(libraryImage);
+
+    // Library Right Section (Title, Description, Utilized, Links)
+    const libraryRightSection = document.createElement('div');
+    libraryRightSection.classList.add('rightSection');
 
     const libraryTitle = document.createElement('h2');
     libraryTitle.innerHTML = 'Library';
 
     const libraryDescription = document.createElement('p');
-    libraryDescription.innerHTML = 'A library'
+    libraryDescription.innerHTML = 'A library for users to keep track of their books'
+
+    const libraryLinks = document.createElement('div');
+    libraryLinks.classList.add('libraryLinks');
 
     const libraryLive = document.createElement('a');
     libraryLive.classList.add('projectLink');
@@ -82,17 +144,38 @@ const projects = () => {
     libraryCode.target = '_blank';
     libraryCode.innerHTML = 'Source Code';
 
-    libraryProject.append(libraryTitle, libraryDescription, libraryLive, libraryCode);
+    libraryLinks.append(libraryLive, libraryCode);
+    libraryRightSection.append(libraryTitle, libraryDescription, libraryLinks);
+
+    libraryProject.append(libraryLeftSection, libraryRightSection);
 
     // Tic-Tac-Toe Element
     const ticProject = document.createElement('div');
-    ticProject.classList.add('ticProject', 'projectItem');
+    ticProject.classList.add('projectItem');
+
+    // Tic-Tac-Toe Left Section (Image)
+    const ticLeftSection = document.createElement('div');
+    ticLeftSection.classList.add('leftSection');
+
+    const ticImage = document.createElement('img');
+    ticImage.src = "./images/exampleTicTacToe.png";
+    ticImage.width = 750;
+    ticImage.height = 500;
+
+    ticLeftSection.append(ticImage);    
+
+    // Tic-Tac-Toe Right Section (Title, Description, Utilized, Links)
+    const ticRightSection = document.createElement('div');
+    ticRightSection.classList.add('rightSection');
 
     const ticTitle = document.createElement('h2');
     ticTitle.innerHTML = 'Tic-Tac-Toe';
 
     const ticDescription = document.createElement('p');
-    ticDescription.innerHTML = 'A tic-tac-toe game'
+    ticDescription.innerHTML = 'A tic-tac-toe game able to play with 2 players';
+
+    const ticLinks = document.createElement('div');
+    ticLinks.classList.add('ticLinks');
 
     const ticLive = document.createElement('a');
     ticLive.classList.add('projectLink');
@@ -105,18 +188,39 @@ const projects = () => {
     ticCode.href = 'https://github.com/KennethNguyen/tic-tac-toe';
     ticCode.target = '_blank';
     ticCode.innerHTML = 'Source Code';
+   
+    ticLinks.append(ticLive, ticCode);
+    ticRightSection.append(ticTitle, ticDescription, ticLinks);
 
-    ticProject.append(ticTitle, ticDescription, ticLive, ticCode);
+    ticProject.append(ticLeftSection, ticRightSection);
 
     // Calculator Element
     const calculatorProject = document.createElement('div');
     calculatorProject.classList.add('calculatorProject', 'projectItem');
 
+    // Calculator Left Section (Image)
+    const calculatorLeftSection = document.createElement('div');
+    calculatorLeftSection.classList.add('leftSection');
+
+    const calculatorImage = document.createElement('img');
+    calculatorImage.src = "./images/exampleCalculator.png";
+    calculatorImage.width = 750;
+    calculatorImage.height = 500;
+
+    calculatorLeftSection.append(calculatorImage);   
+
+    // Calculator Right Section (Title, Description, Utilized, Links)    
+    const calculatorRightSection = document.createElement('div');
+    calculatorRightSection.classList.add('rightSection');
+
     const calculatorTitle = document.createElement('h2');
     calculatorTitle.innerHTML = 'Calculator';
 
     const calculatorDescription = document.createElement('p');
-    calculatorDescription.innerHTML = 'A calculator'
+    calculatorDescription.innerHTML = 'A basic four function calculator'
+
+    const calculatorLinks = document.createElement('div');
+    calculatorLinks.classList.add('calculatorLinks');
 
     const calculatorLive = document.createElement('a');
     calculatorLive.classList.add('projectLink');
@@ -130,23 +234,46 @@ const projects = () => {
     calculatorCode.target = '_blank';
     calculatorCode.innerHTML = 'Source Code';
 
-    calculatorProject.append(calculatorTitle, calculatorDescription, calculatorLive, calculatorCode);
+    calculatorLinks.append(calculatorLive, calculatorCode);
+    calculatorRightSection.append(calculatorTitle, calculatorDescription, calculatorLinks);
+
+    calculatorProject.append(calculatorLeftSection, calculatorRightSection)
 
     // Discover Recipes Element
     const recipeProject = document.createElement('div');
     recipeProject.classList.add('recipeProject', 'projectItem');
 
+    // Recipe Left Section (Image)
+    const recipeLeftSection = document.createElement('div');
+    recipeLeftSection.classList.add('leftSection');
+
+    const recipeImage = document.createElement('img');
+    recipeImage.src = "./images/exampleRecipeWIP.jpg";
+    recipeImage.width = 750;
+    recipeImage.height = 500;
+
+    recipeLeftSection.append(recipeImage);  
+
+    // Recipe Right Section (Title, Description, Utilized, Links)    
+    const recipeRightSection = document.createElement('div');
+    recipeRightSection.classList.add('rightSection');    
+
     const recipeTitle = document.createElement('h2');
-    recipeTitle.innerHTML = 'Discover Recipe';
+    recipeTitle.innerHTML = 'Discover Recipe (WORK IN PROGRESS)';
 
     const recipeDescription = document.createElement('p');
-    recipeDescription.innerHTML = 'A recipe app'
+    recipeDescription.innerHTML = 'A recipe app to discover new recipes using Food2Fork API'
 
+    const recipeLinks = document.createElement('div');
+    recipeLinks.classList.add('recipeLinks');
+
+    /* Currently not on github pages
     const recipeLive = document.createElement('a');
     recipeLive.classList.add('projectLink');
     recipeLive.href = 'https://kennethnguyen.github.io/discover-recipes/';
     recipeLive.target = '_blank';
     recipeLive.innerHTML = 'Live Demo';
+    */
 
     const recipeCode = document.createElement('a');
     recipeCode.classList.add('projectLink');
@@ -154,12 +281,15 @@ const projects = () => {
     recipeCode.target = '_blank';
     recipeCode.innerHTML = 'Source Code';
 
-    recipeProject.append(recipeTitle, recipeDescription, recipeLive, recipeCode);
+    recipeLinks.append(recipeCode);
+    recipeRightSection.append(recipeTitle, recipeDescription, recipeLinks);
 
+    recipeProject.append(recipeLeftSection, recipeRightSection);
+    
     // Append all project elements to the flexbox
-    projectsGrid.append(todoProject, weatherProject, libraryProject, ticProject, calculatorProject, recipeProject);
+    projectsFlexContainer.append(todoProject, weatherProject, libraryProject, ticProject, calculatorProject, recipeProject);
 
-    projectsSection.append(sectionTitle, projectsGrid);
+    projectsSection.append(sectionTitle, projectsFlexContainer);
 
     (document.querySelector('.showcase')).appendChild(projectsSection);
 }

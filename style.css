@@ -113,18 +113,30 @@ a .fa {
 }
 
 /* Projects */
-.projectsGrid {
+.projectItem {
     display: flex;
-    flex-wrap: wrap;
+    padding: 0px;
+    margin: 50px;
     border: 2px solid white;
 }
 
-.projectItem {
-    padding: 20px;
+.todoLinks {
+    align-self: flex-end;
+}
+
+.leftSection {
+    flex: 1;
+    margin: 0px;
+}
+
+.rightSection {
+    flex: 1;
 }
 
 .projectLink {
+    margin: 0px 9px 0px 9px;
     justify-content: space-between;
+    color: whitesmoke;
 }
 
 .projectLink:hover {
