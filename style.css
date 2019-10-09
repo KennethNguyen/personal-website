@@ -33,6 +33,7 @@ li {
 li:hover {
     background-color: salmon;
     cursor: pointer;
+    color: black;
 }
 
 a {
@@ -129,8 +130,22 @@ a .fa {
     margin: 0px;
 }
 
+.projectScreenShot {
+    width: 100%;
+    height: auto;
+}
+
 .rightSection {
     flex: 1;
+}
+
+.projectTitle {
+    padding-bottom: 20px;
+    border-bottom: solid white;
+}
+
+.linksContainer {
+    margin-top: 25px;
 }
 
 .projectLink {

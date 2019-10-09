@@ -23,6 +23,7 @@ const projects = () => {
     todoLeftSection.classList.add('leftSection');
 
     const todoImage = document.createElement('img');
+    todoImage.classList.add('projectScreenshot');
     todoImage.src = "./images/exampleTodo.png";
     todoImage.width = 750;
     todoImage.height = 500;
@@ -34,13 +35,17 @@ const projects = () => {
     todoRightSection.classList.add('rightSection');
 
     const todoTitle = document.createElement('h2');
+    todoTitle.classList.add('projectTitle');
     todoTitle.innerHTML = 'Todo List';
 
     const todoDescription = document.createElement('p');
     todoDescription.innerHTML = 'A todo list for users to add tasks to a list and keep track of which tasks need to be done'
 
+    const todoSkills = document.createElement('p');
+    todoSkills.innerHTML = 'Utilized: React.js, JavaScript, CSS'
+
     const todoLinks = document.createElement('div');
-    todoLinks.classList.add('todoLinks');
+    todoLinks.classList.add('linksContainer');
 
     const todoLive = document.createElement('a');
     todoLive.classList.add('projectLink');
@@ -55,7 +60,7 @@ const projects = () => {
     todoCode.innerHTML = 'Source Code';
 
     todoLinks.append(todoLive, todoCode);
-    todoRightSection.append(todoTitle, todoDescription, todoLinks);
+    todoRightSection.append(todoTitle, todoDescription, todoSkills, todoLinks);
 
     todoProject.append(todoLeftSection, todoRightSection);
 
@@ -79,13 +84,17 @@ const projects = () => {
     weatherRightSection.classList.add('rightSection');
 
     const weatherTitle = document.createElement('h2');
+    weatherTitle.classList.add('projectTitle');
     weatherTitle.innerHTML = 'Weather';
 
     const weatherDescription = document.createElement('p');
     weatherDescription.innerHTML = 'A weather app to determine the weather of any place in the world using OpenWeatherMap API'
 
+    const weatherSkills = document.createElement('p');
+    weatherSkills.innerHTML = 'Utilized: React.js, JavaScript, Bootstrap/CSS'
+
     const weatherLinks = document.createElement('div');
-    weatherLinks.classList.add('weatherLinks');
+    weatherLinks.classList.add('linksContainer');
 
     const weatherLive = document.createElement('a');
     weatherLive.classList.add('projectLink');
@@ -100,7 +109,7 @@ const projects = () => {
     weatherCode.innerHTML = 'Source Code';
 
     weatherLinks.append(weatherLive, weatherCode);
-    weatherRightSection.append(weatherTitle, weatherDescription, weatherLinks);
+    weatherRightSection.append(weatherTitle, weatherDescription, weatherSkills, weatherLinks);
     
     weatherProject.append(weatherLeftSection, weatherRightSection);
 
@@ -124,13 +133,17 @@ const projects = () => {
     libraryRightSection.classList.add('rightSection');
 
     const libraryTitle = document.createElement('h2');
+    libraryTitle.classList.add('projectTitle');
     libraryTitle.innerHTML = 'Library';
 
     const libraryDescription = document.createElement('p');
     libraryDescription.innerHTML = 'A library for users to keep track of their books'
 
+    const librarySkills = document.createElement('p');
+    librarySkills.innerHTML = 'Utilized: HTML, JavaScript, CSS'    
+
     const libraryLinks = document.createElement('div');
-    libraryLinks.classList.add('libraryLinks');
+    libraryLinks.classList.add('linksContainer');
 
     const libraryLive = document.createElement('a');
     libraryLive.classList.add('projectLink');
@@ -145,7 +158,7 @@ const projects = () => {
     libraryCode.innerHTML = 'Source Code';
 
     libraryLinks.append(libraryLive, libraryCode);
-    libraryRightSection.append(libraryTitle, libraryDescription, libraryLinks);
+    libraryRightSection.append(libraryTitle, libraryDescription, librarySkills, libraryLinks);
 
     libraryProject.append(libraryLeftSection, libraryRightSection);
 
@@ -169,13 +182,17 @@ const projects = () => {
     ticRightSection.classList.add('rightSection');
 
     const ticTitle = document.createElement('h2');
+    ticTitle.classList.add('projectTitle');
     ticTitle.innerHTML = 'Tic-Tac-Toe';
+
+    const ticSkills = document.createElement('p');
+    ticSkills.innerHTML = 'Utilized: HTML, JavaScript, CSS'   
 
     const ticDescription = document.createElement('p');
     ticDescription.innerHTML = 'A tic-tac-toe game able to play with 2 players';
 
     const ticLinks = document.createElement('div');
-    ticLinks.classList.add('ticLinks');
+    ticLinks.classList.add('linksContainer');
 
     const ticLive = document.createElement('a');
     ticLive.classList.add('projectLink');
@@ -190,7 +207,7 @@ const projects = () => {
     ticCode.innerHTML = 'Source Code';
    
     ticLinks.append(ticLive, ticCode);
-    ticRightSection.append(ticTitle, ticDescription, ticLinks);
+    ticRightSection.append(ticTitle, ticDescription, ticSkills, ticLinks);
 
     ticProject.append(ticLeftSection, ticRightSection);
 
@@ -214,13 +231,17 @@ const projects = () => {
     calculatorRightSection.classList.add('rightSection');
 
     const calculatorTitle = document.createElement('h2');
+    calculatorTitle.classList.add('projectTitle');
     calculatorTitle.innerHTML = 'Calculator';
 
     const calculatorDescription = document.createElement('p');
     calculatorDescription.innerHTML = 'A basic four function calculator'
 
+    const calculatorSkills = document.createElement('p');
+    calculatorSkills.innerHTML = 'Utilized: HTML, JavaScript, CSS'   
+
     const calculatorLinks = document.createElement('div');
-    calculatorLinks.classList.add('calculatorLinks');
+    calculatorLinks.classList.add('linksContainer');
 
     const calculatorLive = document.createElement('a');
     calculatorLive.classList.add('projectLink');
@@ -235,7 +256,7 @@ const projects = () => {
     calculatorCode.innerHTML = 'Source Code';
 
     calculatorLinks.append(calculatorLive, calculatorCode);
-    calculatorRightSection.append(calculatorTitle, calculatorDescription, calculatorLinks);
+    calculatorRightSection.append(calculatorTitle, calculatorDescription, calculatorSkills, calculatorLinks);
 
     calculatorProject.append(calculatorLeftSection, calculatorRightSection)
 
@@ -259,13 +280,17 @@ const projects = () => {
     recipeRightSection.classList.add('rightSection');    
 
     const recipeTitle = document.createElement('h2');
+    recipeTitle.classList.add('projectTitle');
     recipeTitle.innerHTML = 'Discover Recipe (WORK IN PROGRESS)';
 
     const recipeDescription = document.createElement('p');
     recipeDescription.innerHTML = 'A recipe app to discover new recipes using Food2Fork API'
 
+    const recipeSkills = document.createElement('p');
+    recipeSkills.innerHTML = 'Utilized: React.js, JavaScript, CSS'   
+
     const recipeLinks = document.createElement('div');
-    recipeLinks.classList.add('recipeLinks');
+    recipeLinks.classList.add('linksContainer');
 
     /* Currently not on github pages
     const recipeLive = document.createElement('a');
@@ -282,7 +307,7 @@ const projects = () => {
     recipeCode.innerHTML = 'Source Code';
 
     recipeLinks.append(recipeCode);
-    recipeRightSection.append(recipeTitle, recipeDescription, recipeLinks);
+    recipeRightSection.append(recipeTitle, recipeDescription, recipeSkills, recipeLinks);
 
     recipeProject.append(recipeLeftSection, recipeRightSection);
     
