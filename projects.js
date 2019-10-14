@@ -55,7 +55,7 @@ const projects = () => {
 
     const todoCode = document.createElement('a');
     todoCode.classList.add('projectLink');
-    todoCode.href = 'https://github.com/KennethNguyenx solid white;/todo-list';
+    todoCode.href = 'https://github.com/KennethNguyen/todo-list';
     todoCode.target = '_blank';
     todoCode.innerHTML = 'Source Code';
 
