@@ -108,8 +108,11 @@ const projects = () => {
     weatherCode.target = '_blank';
     weatherCode.innerHTML = 'Source Code';
 
+    const weatherDisclaimer = document.createElement('p');
+    weatherDisclaimer.innerHTML = '*Disclaimer: User must disable https secure connection to fetch the API call if using the demo. This is not needed if repo is cloned and is run using npm start'
+
     weatherLinks.append(weatherLive, weatherCode);
-    weatherRightSection.append(weatherTitle, weatherDescription, weatherSkills, weatherLinks);
+    weatherRightSection.append(weatherTitle, weatherDescription, weatherSkills, weatherLinks, weatherDisclaimer);
     
     weatherProject.append(weatherLeftSection, weatherRightSection);
 
