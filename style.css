@@ -7,6 +7,7 @@ body {
     font-family: 'Roboto Mono', monospace;
 }
 
+/* Header on the left side of website */
 .header {
     flex: 1;
     background-color: black;
@@ -127,7 +128,7 @@ a .fa {
 
 .leftSection {
     flex: 1;
-    margin: 0px;
+    margin: 0px 0px -5px 0px;
 }
 
 .projectScreenShot {
@@ -137,6 +138,10 @@ a .fa {
 
 .rightSection {
     flex: 1;
+}
+
+.rightSection, p {
+    font-size: 18px;
 }
 
 .projectTitle {
@@ -151,9 +156,36 @@ a .fa {
 .projectLink {
     margin: 0px 9px 0px 9px;
     justify-content: space-between;
-    color: whitesmoke;
 }
 
-.projectLink:hover {
-    text-decoration: underline;
+.projectButton {
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 9px 15px 9px 15px;    
+    transition-duration: 0.3s;
+}
+
+.projectButton:hover {
+    cursor: pointer;
+}
+
+.projectLiveButton { 
+    background-color: #ffbe60; /*  */
+    color: #141414;
+}
+
+.projectLiveButton:hover {
+    background-color: #ffd87a;
+}
+
+.projectCodeButton {
+    background-color: #7ee2b6;
+    color: #141414;
+}
+
+.projectCodeButton:hover {
+    background-color: #98fcd0;
 }

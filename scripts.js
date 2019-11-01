@@ -6,7 +6,6 @@ import {resume} from './resume.js';
 // Display projects page upon load
 //projects();
 
-// Line below is element that is currently WIP 
 projects();
 
 document.getElementById('project').addEventListener('click', function () {

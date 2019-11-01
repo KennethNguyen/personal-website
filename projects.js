@@ -51,13 +51,19 @@ const projects = () => {
     todoLive.classList.add('projectLink');
     todoLive.href = 'https://kennethnguyen.github.io/todo-list/';
     todoLive.target = '_blank';
-    todoLive.innerHTML = 'Live Demo';
+    const todoLiveButton = document.createElement('button');
+    todoLiveButton.classList.add('projectButton', 'projectLiveButton');
+    todoLiveButton.innerHTML = 'Live Demo';
+    todoLive.append(todoLiveButton);
 
     const todoCode = document.createElement('a');
     todoCode.classList.add('projectLink');
     todoCode.href = 'https://github.com/KennethNguyen/todo-list';
     todoCode.target = '_blank';
-    todoCode.innerHTML = 'Source Code';
+    const todoCodeButton = document.createElement('button');
+    todoCodeButton.classList.add('projectButton', 'projectCodeButton');
+    todoCodeButton.innerHTML = 'Source Code';
+    todoCode.append(todoCodeButton);
 
     todoLinks.append(todoLive, todoCode);
     todoRightSection.append(todoTitle, todoDescription, todoSkills, todoLinks);
@@ -100,13 +106,19 @@ const projects = () => {
     weatherLive.classList.add('projectLink');
     weatherLive.href = 'https://kennethnguyen.github.io/weather-app/';
     weatherLive.target = '_blank';
-    weatherLive.innerHTML = 'Live Demo';
+    const weatherLiveButton = document.createElement('button');
+    weatherLiveButton.classList.add('projectButton', 'projectLiveButton');
+    weatherLiveButton.innerHTML = 'Live Demo';
+    weatherLive.append(weatherLiveButton);
 
     const weatherCode = document.createElement('a');
     weatherCode.classList.add('projectLink');
     weatherCode.href = 'https://github.com/KennethNguyen/weather-app';
     weatherCode.target = '_blank';
-    weatherCode.innerHTML = 'Source Code';
+    const weatherCodeButton = document.createElement('button');
+    weatherCodeButton.classList.add('projectButton', 'projectCodeButton');
+    weatherCodeButton.innerHTML = 'Source Code';
+    weatherCode.append(weatherCodeButton);
 
     const weatherDisclaimer = document.createElement('p');
     weatherDisclaimer.innerHTML = '*Disclaimer: User must disable https secure connection to fetch the API call if using the demo. This is not needed if repo is cloned and is run using npm start'
@@ -152,13 +164,19 @@ const projects = () => {
     libraryLive.classList.add('projectLink');
     libraryLive.href = 'https://kennethnguyen.github.io/library/';
     libraryLive.target = '_blank';
-    libraryLive.innerHTML = 'Live Demo';
+    const libraryLiveButton = document.createElement('button');
+    libraryLiveButton.classList.add('projectButton', 'projectLiveButton');
+    libraryLiveButton.innerHTML = 'Live Demo';
+    libraryLive.append(libraryLiveButton);
 
     const libraryCode = document.createElement('a');
     libraryCode.classList.add('projectLink');
     libraryCode.href = 'https://github.com/KennethNguyen/library';
     libraryCode.target = '_blank';
-    libraryCode.innerHTML = 'Source Code';
+    const libraryCodeButton = document.createElement('button');
+    libraryCodeButton.classList.add('projectButton', 'projectCodeButton');
+    libraryCodeButton.innerHTML = 'Source Code';
+    libraryCode.append(libraryCodeButton);
 
     libraryLinks.append(libraryLive, libraryCode);
     libraryRightSection.append(libraryTitle, libraryDescription, librarySkills, libraryLinks);
@@ -201,13 +219,19 @@ const projects = () => {
     ticLive.classList.add('projectLink');
     ticLive.href = 'https://kennethnguyen.github.io/tic-tac-toe/';
     ticLive.target = '_blank';
-    ticLive.innerHTML = 'Live Demo';
+    const ticLiveButton = document.createElement('button');
+    ticLiveButton.classList.add('projectButton', 'projectLiveButton');
+    ticLiveButton.innerHTML = 'Live Demo';
+    ticLive.append(ticLiveButton);
 
     const ticCode = document.createElement('a');
     ticCode.classList.add('projectLink');
     ticCode.href = 'https://github.com/KennethNguyen/tic-tac-toe';
     ticCode.target = '_blank';
-    ticCode.innerHTML = 'Source Code';
+    const ticCodeButton = document.createElement('button');
+    ticCodeButton.classList.add('projectButton', 'projectCodeButton');
+    ticCodeButton.innerHTML = 'Source Code';
+    ticCode.append(ticCodeButton);
    
     ticLinks.append(ticLive, ticCode);
     ticRightSection.append(ticTitle, ticDescription, ticSkills, ticLinks);
@@ -250,13 +274,19 @@ const projects = () => {
     calculatorLive.classList.add('projectLink');
     calculatorLive.href = 'https://kennethnguyen.github.io/calculator/';
     calculatorLive.target = '_blank';
-    calculatorLive.innerHTML = 'Live Demo';
+    const calculatorLiveButton = document.createElement('button');
+    calculatorLiveButton.classList.add('projectButton', 'projectLiveButton');
+    calculatorLiveButton.innerHTML = 'Live Demo';
+    calculatorLive.append(calculatorLiveButton);
 
     const calculatorCode = document.createElement('a');
     calculatorCode.classList.add('projectLink');
     calculatorCode.href = 'https://github.com/KennethNguyen/calculator';
     calculatorCode.target = '_blank';
-    calculatorCode.innerHTML = 'Source Code';
+    const calculatorCodeButton = document.createElement('button');
+    calculatorCodeButton.classList.add('projectButton', 'projectCodeButton');
+    calculatorCodeButton.innerHTML = 'Source Code';
+    calculatorCode.append(calculatorCodeButton);
 
     calculatorLinks.append(calculatorLive, calculatorCode);
     calculatorRightSection.append(calculatorTitle, calculatorDescription, calculatorSkills, calculatorLinks);
@@ -307,7 +337,10 @@ const projects = () => {
     recipeCode.classList.add('projectLink');
     recipeCode.href = 'https://github.com/KennethNguyen/discover-recipes';
     recipeCode.target = '_blank';
-    recipeCode.innerHTML = 'Source Code';
+    const recipeCodeButton = document.createElement('button');
+    recipeCodeButton.classList.add('projectButton', 'projectCodeButton');
+    recipeCodeButton.innerHTML = 'Source Code';
+    recipeCode.append(recipeCodeButton);
 
     recipeLinks.append(recipeCode);
     recipeRightSection.append(recipeTitle, recipeDescription, recipeSkills, recipeLinks);
