@@ -25,8 +25,10 @@ const projects = () => {
     const todoImage = document.createElement('img');
     todoImage.classList.add('projectScreenshot');
     todoImage.src = "./images/exampleTodo.png";
-    todoImage.width = 750;
-    todoImage.height = 500;
+    todoImage.style.minWidth = '50vmin';
+    todoImage.style.minHeight = '50vmin';
+    todoImage.style.width = '100%';
+    todoImage.style.height = '100%';
 
     todoLeftSection.append(todoImage);
 
@@ -80,8 +82,10 @@ const projects = () => {
 
     const weatherImage = document.createElement('img');
     weatherImage.src = "./images/exampleWeather.png";
-    weatherImage.width = 750;
-    weatherImage.height = 500;
+    weatherImage.style.minWidth = '50vmin';
+    weatherImage.style.minHeight = '50vmin';
+    weatherImage.style.width = '100%';
+    weatherImage.style.height = '100%';
 
     weatherLeftSection.append(weatherImage);
 
@@ -138,8 +142,10 @@ const projects = () => {
 
     const libraryImage = document.createElement('img');
     libraryImage.src = "./images/exampleLibrary.png";
-    libraryImage.width = 750;
-    libraryImage.height = 500;
+    libraryImage.style.minWidth = '50vmin';
+    libraryImage.style.minHeight = '50vmin';
+    libraryImage.style.width = '100%';
+    libraryImage.style.height = '100%';
 
     libraryLeftSection.append(libraryImage);
 
@@ -193,8 +199,10 @@ const projects = () => {
 
     const ticImage = document.createElement('img');
     ticImage.src = "./images/exampleTicTacToe.png";
-    ticImage.width = 750;
-    ticImage.height = 500;
+    ticImage.style.minWidth = '50vmin';
+    ticImage.style.minHeight = '50vmin';
+    ticImage.style.width = '100%';
+    ticImage.style.height = '100%';
 
     ticLeftSection.append(ticImage);    
 
@@ -248,8 +256,10 @@ const projects = () => {
 
     const calculatorImage = document.createElement('img');
     calculatorImage.src = "./images/exampleCalculator.png";
-    calculatorImage.width = 750;
-    calculatorImage.height = 500;
+    calculatorImage.style.minWidth = '50vmin';
+    calculatorImage.style.minHeight = '50vmin';
+    calculatorImage.style.width = '100%';
+    calculatorImage.style.height = '100%';
 
     calculatorLeftSection.append(calculatorImage);   
 
@@ -303,8 +313,10 @@ const projects = () => {
 
     const recipeImage = document.createElement('img');
     recipeImage.src = "./images/exampleRecipeWIP.jpg";
-    recipeImage.width = 750;
-    recipeImage.height = 500;
+    recipeImage.style.minWidth = '50vmin';
+    recipeImage.style.minHeight = '50vmin';
+    recipeImage.style.width = '100%';
+    recipeImage.style.height = '100%';
 
     recipeLeftSection.append(recipeImage);  
 

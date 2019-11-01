@@ -117,6 +117,7 @@ a .fa {
 /* Projects */
 .projectItem {
     display: flex;
+    flex-flow: row wrap;
     padding: 0px;
     margin: 50px;
     border: 2px solid white;
@@ -127,8 +128,8 @@ a .fa {
 }
 
 .leftSection {
-    flex: 1;
-    margin: 0px 0px -5px 0px;
+    flex: 1.25;
+    margin: 0px;
 }
 
 .projectScreenShot {
@@ -140,8 +141,11 @@ a .fa {
     flex: 1;
 }
 
-.rightSection, p {
+.rightSection p {
     font-size: 18px;
+    margin: 5px auto 10px auto;
+    width: 85%;
+    padding: 5px;
 }
 
 .projectTitle {
@@ -164,7 +168,8 @@ a .fa {
     text-align: center;
     font-size: 18px;
     letter-spacing: 1px;
-    padding: 9px 15px 9px 15px;    
+    padding: 9px 15px 9px 15px;
+    margin: 5px 0px 5px 0px;    
     transition-duration: 0.3s;
 }
 
