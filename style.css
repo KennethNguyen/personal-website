@@ -2,9 +2,11 @@
 
 body {
     display: flex;
-    min-height: 100vh;
     margin: 0px;
     font-family: 'Roboto Mono', monospace;
+    height: 100%;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
 /* Header on the left side of website */
@@ -59,7 +61,6 @@ a .fa {
     text-align: center;
     color: white;
     opacity: 0.9;
-    overflow: auto;
 }
 
 /* About Me */
@@ -115,6 +116,11 @@ a .fa {
 }
 
 /* Projects */
+.projects {
+    height: 100vh;
+    overflow-y: auto;
+}
+
 .projectItem {
     display: flex;
     flex-flow: row wrap;
