@@ -1,4 +1,4 @@
-// Chop up project components instead of making one big file probably
+import {createImage} from './projectTemplate.js';
 
 const projects = () => {
     // Change background of Projects section to a shade of black - River Bed
@@ -21,16 +21,7 @@ const projects = () => {
     // Todo Left Section (Image)
     const todoLeftSection = document.createElement('div');
     todoLeftSection.classList.add('leftSection');
-
-    const todoImage = document.createElement('img');
-    todoImage.classList.add('projectScreenshot');
-    todoImage.src = "./images/exampleTodo.png";
-    todoImage.style.minWidth = '50vmin';
-    todoImage.style.minHeight = '50vmin';
-    todoImage.style.width = '100%';
-    todoImage.style.height = '100%';
-
-    todoLeftSection.append(todoImage);
+    todoLeftSection.append(createImage("./images/exampleTodo.png"));
 
     // Todo Right Section (Title, Description, Utilized, Links)
     const todoRightSection = document.createElement('div');
@@ -79,15 +70,7 @@ const projects = () => {
     // Weather Left Section (Image)
     const weatherLeftSection = document.createElement('div');
     weatherLeftSection.classList.add('leftSection');
-
-    const weatherImage = document.createElement('img');
-    weatherImage.src = "./images/exampleWeather.png";
-    weatherImage.style.minWidth = '50vmin';
-    weatherImage.style.minHeight = '50vmin';
-    weatherImage.style.width = '100%';
-    weatherImage.style.height = '100%';
-
-    weatherLeftSection.append(weatherImage);
+    weatherLeftSection.append(createImage("./images/exampleWeather.png"));
 
     // Weather Right Section (Title, Description, Utilized, Links)
     const weatherRightSection = document.createElement('div');
@@ -139,15 +122,7 @@ const projects = () => {
     // Library Left Section (Image)
     const libraryLeftSection = document.createElement('div');
     libraryLeftSection.classList.add('leftSection');
-
-    const libraryImage = document.createElement('img');
-    libraryImage.src = "./images/exampleLibrary.png";
-    libraryImage.style.minWidth = '50vmin';
-    libraryImage.style.minHeight = '50vmin';
-    libraryImage.style.width = '100%';
-    libraryImage.style.height = '100%';
-
-    libraryLeftSection.append(libraryImage);
+    libraryLeftSection.append(createImage("./images/exampleLibrary.png"));
 
     // Library Right Section (Title, Description, Utilized, Links)
     const libraryRightSection = document.createElement('div');
@@ -196,15 +171,7 @@ const projects = () => {
     // Tic-Tac-Toe Left Section (Image)
     const ticLeftSection = document.createElement('div');
     ticLeftSection.classList.add('leftSection');
-
-    const ticImage = document.createElement('img');
-    ticImage.src = "./images/exampleTicTacToe.png";
-    ticImage.style.minWidth = '50vmin';
-    ticImage.style.minHeight = '50vmin';
-    ticImage.style.width = '100%';
-    ticImage.style.height = '100%';
-
-    ticLeftSection.append(ticImage);    
+    ticLeftSection.append(createImage("./images/exampleTicTacToe.png"));    
 
     // Tic-Tac-Toe Right Section (Title, Description, Utilized, Links)
     const ticRightSection = document.createElement('div');
@@ -253,15 +220,7 @@ const projects = () => {
     // Calculator Left Section (Image)
     const calculatorLeftSection = document.createElement('div');
     calculatorLeftSection.classList.add('leftSection');
-
-    const calculatorImage = document.createElement('img');
-    calculatorImage.src = "./images/exampleCalculator.png";
-    calculatorImage.style.minWidth = '50vmin';
-    calculatorImage.style.minHeight = '50vmin';
-    calculatorImage.style.width = '100%';
-    calculatorImage.style.height = '100%';
-
-    calculatorLeftSection.append(calculatorImage);   
+    calculatorLeftSection.append(createImage("./images/exampleCalculator.png"));   
 
     // Calculator Right Section (Title, Description, Utilized, Links)    
     const calculatorRightSection = document.createElement('div');
@@ -303,64 +262,8 @@ const projects = () => {
 
     calculatorProject.append(calculatorLeftSection, calculatorRightSection)
 
-    // Discover Recipes Element
-    const recipeProject = document.createElement('div');
-    recipeProject.classList.add('recipeProject', 'projectItem');
-
-    // Recipe Left Section (Image)
-    const recipeLeftSection = document.createElement('div');
-    recipeLeftSection.classList.add('leftSection');
-
-    const recipeImage = document.createElement('img');
-    recipeImage.src = "./images/exampleRecipeWIP.jpg";
-    recipeImage.style.minWidth = '50vmin';
-    recipeImage.style.minHeight = '50vmin';
-    recipeImage.style.width = '100%';
-    recipeImage.style.height = '100%';
-
-    recipeLeftSection.append(recipeImage);  
-
-    // Recipe Right Section (Title, Description, Utilized, Links)    
-    const recipeRightSection = document.createElement('div');
-    recipeRightSection.classList.add('rightSection');    
-
-    const recipeTitle = document.createElement('h2');
-    recipeTitle.classList.add('projectTitle');
-    recipeTitle.innerHTML = 'Discover Recipe (WORK IN PROGRESS)';
-
-    const recipeDescription = document.createElement('p');
-    recipeDescription.innerHTML = 'A recipe app to discover new recipes using Food2Fork API'
-
-    const recipeSkills = document.createElement('p');
-    recipeSkills.innerHTML = 'Utilized: React.js, JavaScript, CSS'   
-
-    const recipeLinks = document.createElement('div');
-    recipeLinks.classList.add('linksContainer');
-
-    /* Currently not on github pages
-    const recipeLive = document.createElement('a');
-    recipeLive.classList.add('projectLink');
-    recipeLive.href = 'https://kennethnguyen.github.io/discover-recipes/';
-    recipeLive.target = '_blank';
-    recipeLive.innerHTML = 'Live Demo';
-    */
-
-    const recipeCode = document.createElement('a');
-    recipeCode.classList.add('projectLink');
-    recipeCode.href = 'https://github.com/KennethNguyen/discover-recipes';
-    recipeCode.target = '_blank';
-    const recipeCodeButton = document.createElement('button');
-    recipeCodeButton.classList.add('projectButton', 'projectCodeButton');
-    recipeCodeButton.innerHTML = 'Source Code';
-    recipeCode.append(recipeCodeButton);
-
-    recipeLinks.append(recipeCode);
-    recipeRightSection.append(recipeTitle, recipeDescription, recipeSkills, recipeLinks);
-
-    recipeProject.append(recipeLeftSection, recipeRightSection);
-    
     // Append all project elements to the flexbox
-    projectsFlexContainer.append(todoProject, weatherProject, libraryProject, ticProject, calculatorProject, recipeProject);
+    projectsFlexContainer.append(todoProject, weatherProject, libraryProject, ticProject, calculatorProject);
 
     projectsSection.append(sectionTitle, projectsFlexContainer);
 
