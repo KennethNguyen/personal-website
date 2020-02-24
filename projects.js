@@ -101,6 +101,32 @@ const projects = () => {
 
     libraryProject.append(libraryLeftSection, libraryRightSection);
 
+    // Reddit FMF Script Element
+    const redditProject = document.createElement('div');
+    redditProject.classList.add('projectItem');
+
+    // Reddit FMF Script Left Section (Image)
+    const redditLeftSection = document.createElement('div');
+    redditLeftSection.classList.add('leftSection');
+    redditLeftSection.append(createImage("./images/exampleScript.png"));
+
+    // Reddit FMF Script Right Section (Title, Description, Utilized, Links)
+    const redditRightSection = document.createElement('div');
+    redditRightSection.classList.add('rightSection');
+    const [redditTitle, redditDescription, redditSkills] = createRight('Reddit FMF Deal Scraper',
+                                                                'A script that scrapes /r/frugalmalefashion for deals and notifies the Reddit user of said deals in a Private Message',
+                                                                'Utilized: Python, PRAW (Python Reddit API Wrapper)'
+    );
+
+    const redditLinks = document.createElement('div');
+    redditLinks.classList.add('linksContainer');
+    const [redditLive, redditCode] = linkDiv('', 'https://github.com/KennethNguyen/reddit-fmf-deal-scraper');
+
+    redditLinks.append(redditCode);
+    redditRightSection.append(redditTitle, redditDescription, redditSkills, redditLinks);
+    
+    redditProject.append(redditLeftSection, redditRightSection);
+
     // Tic-Tac-Toe Element
     const ticProject = document.createElement('div');
     ticProject.classList.add('projectItem');
@@ -158,7 +184,7 @@ const projects = () => {
     calculatorProject.append(calculatorLeftSection, calculatorRightSection)
 
     // Append all project elements to the flexbox
-    projectsFlexContainer.append(todoProject, weatherProject, libraryProject, ticProject, calculatorProject);
+    projectsFlexContainer.append(todoProject, weatherProject, redditProject, libraryProject, ticProject, calculatorProject);
 
     projectsSection.append(sectionTitle, projectsFlexContainer);
 
