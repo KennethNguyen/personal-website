@@ -64,6 +64,11 @@ a .fa {
 }
 
 /* About Me */
+.aboutMe {
+    height: 100vh;
+    overflow-y: auto;    
+}
+
 .aboutGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

@@ -78,8 +78,10 @@ const aboutMe = () => {
     // Append all content elements to grid
     aboutGrid.append(personalSelf, hobbies, topGames, lofi);
 
-    //aboutSection.appendChild(aboutGrid);
-    (document.querySelector('.showcase')).append(aboutSection, aboutGrid, lofi);
+    // Append grid and lofi music video to About Me div
+    aboutSection.append(aboutGrid, lofi);
+
+    (document.querySelector('.showcase')).append(aboutSection);
 }
 
 export {aboutMe};
