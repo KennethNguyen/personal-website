@@ -1,0 +1,202 @@
+/* Look into refactoring css code */
+
+body {
+    display: flex;
+    margin: 0px;
+    font-family: 'Roboto Mono', monospace;
+    height: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Header on the left side of website */
+.header {
+    flex: 1;
+    background-color: black;
+    opacity: 0.85;
+    text-align: center;
+    vertical-align: center;
+    color: white;
+}
+
+.intro {
+    padding: 10%;
+}
+
+.navElements {
+    list-style: none;
+    padding: 10%;
+}
+
+li {
+    font-size: 20px;
+    padding: 10px;
+}
+
+li:hover {
+    background-color: salmon;
+    cursor: pointer;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a .fa {
+    color: white;
+}
+
+.fa {
+    padding: 5%;
+}
+
+.fa:hover {
+    text-shadow: 0px 0px 26px silver;
+}
+
+.showcase {
+    flex: 3;
+    text-align: center;
+    color: white;
+    opacity: 0.9;
+}
+
+/* About Me */
+.aboutGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    margin: 15px;
+}
+
+.aboutElement {
+    border: 2px solid white;
+    border-radius: 16px;
+}
+
+#personalSelf {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+
+#hobbies {
+    grid-column: 1 / 3;
+    grid-row: 3 / 5;
+}
+
+#topGames {
+    grid-column: 3 / 5;
+    grid-row: 1 / 5;
+}
+
+.aboutText {
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: left;
+    font-size: 18px;
+}
+
+/* Resume */
+.userLinks {
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.linkItem {
+    font-size: 18px;
+}
+
+.linkItem:hover {
+    text-decoration: underline;
+}
+
+/* Projects */
+.projects {
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.projectItem {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0px;
+    margin: 50px;
+    border: 2px solid white;
+}
+
+.todoLinks {
+    align-self: flex-end;
+}
+
+.leftSection {
+    flex: 1.25;
+    margin: 0px;
+}
+
+.projectScreenShot {
+    width: 100%;
+    height: auto;
+}
+
+.rightSection {
+    flex: 1;
+}
+
+.rightSection p {
+    font-size: 18px;
+    margin: 5px auto 10px auto;
+    width: 85%;
+    padding: 5px;
+}
+
+.projectTitle {
+    padding-bottom: 20px;
+    border-bottom: solid white;
+}
+
+.linksContainer {
+    margin-top: 25px;
+}
+
+.projectLink {
+    margin: 0px 9px 0px 9px;
+    justify-content: space-between;
+}
+
+.projectButton {
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 9px 15px 9px 15px;
+    margin: 5px 0px 5px 0px;    
+    transition-duration: 0.3s;
+}
+
+.projectButton:hover {
+    cursor: pointer;
+}
+
+.projectLiveButton { 
+    background-color: #ffbe60; /*  */
+    color: #141414;
+}
+
+.projectLiveButton:hover {
+    background-color: #ffd87a;
+}
+
+.projectCodeButton {
+    background-color: #7ee2b6;
+    color: #141414;
+}
+
+.projectCodeButton:hover {
+    background-color: #98fcd0;
+}
