@@ -1,0 +1,24 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "kenneth nguyen portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KennethNguyen/personal-website.git"
+  },
+  "author": "Kenneth Nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KennethNguyen/personal-website/issues"
+  },
+  "homepage": "https://github.com/KennethNguyen/personal-website#readme",
+  "devDependencies": {
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
+  }
+}

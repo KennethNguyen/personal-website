@@ -120,7 +120,7 @@ const projects = () => {
 
     const redditLinks = document.createElement('div');
     redditLinks.classList.add('linksContainer');
-    const [redditLive, redditCode] = linkDiv('', 'https://github.com/KennethNguyen/reddit-fmf-deal-scraper');
+    const [, redditCode] = linkDiv('', 'https://github.com/KennethNguyen/reddit-fmf-deal-scraper');
 
     redditLinks.append(redditCode);
     redditRightSection.append(redditTitle, redditDescription, redditSkills, redditLinks);
