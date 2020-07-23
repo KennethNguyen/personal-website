@@ -65,11 +65,8 @@ const projects = () => {
                                          'https://github.com/KennethNguyen/weather-app'
     );
 
-    const weatherDisclaimer = document.createElement('p');
-    weatherDisclaimer.innerHTML = '*Disclaimer: User must disable https secure connection to fetch the API call if using the demo. This is not needed if repo is cloned and is run using npm start'
-
     weatherLinks.append(weatherLive, weatherCode);
-    weatherRightSection.append(weatherTitle, weatherDescription, weatherSkills, weatherLinks, weatherDisclaimer);
+    weatherRightSection.append(weatherTitle, weatherDescription, weatherSkills, weatherLinks);
     
     weatherProject.append(weatherLeftSection, weatherRightSection);
 

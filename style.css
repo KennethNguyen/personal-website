@@ -1,4 +1,5 @@
 /* Look into refactoring css code */
+/* Look into changing color palette to blue / red / green / black / gray mix */
 
 body {
     display: flex;
@@ -21,6 +22,10 @@ body {
 
 .intro {
     padding: 10%;
+}
+
+hr {
+    color: white;
 }
 
 .navElements {
