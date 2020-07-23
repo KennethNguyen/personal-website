@@ -8,7 +8,6 @@ const aboutMe = () => {
 
     const sectionTitle = document.createElement('h1');
     sectionTitle.innerHTML = 'About Me';
-    aboutSection.appendChild(sectionTitle);
 
     // The content for the About Me section in a grid
     const aboutGrid = document.createElement('div');
@@ -76,12 +75,12 @@ const aboutMe = () => {
     lofi.style.minHeight = '260px';
 
     // Append all content elements to grid
-    aboutGrid.append(personalSelf, hobbies, topGames, lofi);
+    aboutGrid.append(personalSelf, hobbies, topGames);
 
     // Append grid and lofi music video to About Me div
-    aboutSection.append(aboutGrid, lofi);
-
-    (document.querySelector('.showcase')).append(aboutSection);
+    aboutSection.append(sectionTitle, aboutGrid, lofi);
+    
+    (document.querySelector('.showcase')).appendChild(aboutSection);
 }
 
 export {aboutMe};

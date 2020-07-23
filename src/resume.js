@@ -29,6 +29,7 @@ const resume = () => {
 
     // Create a viewable resume directly on the webpage
     const resumePDF = document.createElement('embed');
+    resumePDF.classList.add('resumePDF');
     resumePDF.src = "KennethNguyen-Resume.pdf";
     resumePDF.style.maxHeight = '800'
     resumePDF.height = '800';
