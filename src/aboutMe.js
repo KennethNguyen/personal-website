@@ -77,6 +77,9 @@ const aboutMe = () => {
     // Append all content elements to grid
     aboutGrid.append(personalSelf, hobbies, topGames);
 
+    const blegh = document.createElement('h1');
+    blegh.innerHTML = "Hi!";
+    aboutSection.append(blegh);
     // Append grid and lofi music video to About Me div
     aboutSection.append(sectionTitle, aboutGrid, lofi);
     
