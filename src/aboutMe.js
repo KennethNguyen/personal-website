@@ -19,11 +19,11 @@ const aboutMe = () => {
     personalSelf.id = 'personalSelf';
 
     const personalTitle = document.createElement('h2');
-    personalTitle.innerHTML = "I'm Kenneth Nguyen";
+    personalTitle.innerHTML = "Who Am I?";
 
     const personalText = document.createElement('p');
     personalText.classList.add('aboutText');
-    personalText.innerHTML = "I am a third year B.S. Computer Science major at University of California, Santa Cruz. Driven and focused, I like to see exceptional results and strive to produce such results. While working on a project, I think about ways to optimize or further improve any component of the project. Typically, I make notes on what I want to implement next on a project if I do not get to it. I am constantly learning new technology skills and improving myself as a programmer. My interests lie in learning and discovering new technologies and being able to deploy software that people want to use."
+    personalText.innerHTML = "I am a fourth year B.S. Computer Science major at University of California, Santa Cruz. Driven and focused, I like to see exceptional results and strive to produce such results. While working on a project, I think about ways to optimize or further improve any component of the project. Typically, I make notes on what I want to implement next on a project if I do not get to it. I am constantly learning new technology skills and improving myself as a programmer. My interests lie in learning and discovering new technologies and being able to deploy software that people want to use."
 
     personalSelf.append(personalTitle, personalText);
 
