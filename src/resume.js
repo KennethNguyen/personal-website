@@ -1,6 +1,6 @@
 const resume = () => {
     // Change background of Resume section to a shade of black - Fuscous Gray
-    (document.querySelector('.showcase')).style.backgroundColor = '#565350';
+    (document.querySelector('.showcase')).style.backgroundColor = '#fff9e3';
 
     const resumeSection = document.createElement('div');
     resumeSection.classList.add('resume');

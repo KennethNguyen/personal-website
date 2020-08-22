@@ -1,35 +1,49 @@
 /* Look into refactoring css code */
 /* Look into changing color palette to blue / red / green / black / gray mix */
+/* Color Palette
+    body -> fff9e3 -> cosmic latte
+    header -> fbf1ca -> darker shade of background
+    
+    
+    Peach color palette -> https://www.color-hex.com/color-palette/6060
+*/
 
 body {
     display: flex;
+    flex-direction: row;
     margin: 0px;
-     /* font-family: 'Roboto Mono', monospace;  */
     font-family: 'Roboto', sans-serif;
     height: 100%;
     min-height: 100vh;
     overflow: hidden;
+    background-color: #fff9e3;
 }
 
-/* Header on the left side of website */
+/* HEADER/NAV BAR SECTION */
+/* Left side of website, on top for smaller viewports */
 .header {
     flex: 1;
-    background-color: black;
-    opacity: 0.85;
+    align-self: center;
+    background-color: #fbf1ca;
     text-align: center;
     vertical-align: center;
-    color: white;
-    height: 100vh;
+    color: black;
+    height: 80vh;
     overflow-y: auto;
     letter-spacing: 2px;
+    padding: 1%;
+    margin: auto 3%;
+    border-radius: 3rem;
+    box-shadow: 0px 10px 18px #888888;
 }
 
 .intro {
     padding: 10%;
 }
 
+/* Thematic break underneath */
 hr {
-    color: white;
+    color: black;
 }
 
 .navElements {
@@ -43,18 +57,19 @@ li {
 }
 
 li:hover {
-    background-color: salmon;
+    background-color: #FADAA5; /* salmon */
+    border-radius: 2rem;
     cursor: pointer;
+}
+
+/* fa-awesome icons */
+a {
+    text-decoration: none;
     color: black;
 }
 
-a {
-    text-decoration: none;
-    color: white;
-}
-
 a .fa {
-    color: white;
+    color: black;
 }
 
 .fa {
@@ -62,13 +77,25 @@ a .fa {
 }
 
 .fa:hover {
-    text-shadow: 0px 0px 26px silver;
+    text-shadow: 0px 0px 26px black;
 }
 
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .header {
+        flex-direction: row;
+        box-shadow: none;
+    }
+}
+
+/* CONTENT AREA */
 .showcase {
-    flex: 3;
+    flex: 5;
     text-align: center;
-    color: white;
+    color: black;
     opacity: 0.9;
 }
 
@@ -87,7 +114,10 @@ a .fa {
 }
 
 .aboutElement {
-    border: 2px solid white;
+    background-color: #fbf1ca;
+    box-shadow: 0px 10px 18px #888888;
+    border: 5px solid white;
+    margin: 1rem;
     border-radius: 16px;
 }
 
@@ -102,7 +132,7 @@ a .fa {
 }
 
 #topGames {
-    grid-column: 3 / 5;
+    grid-column: 3;
     grid-row: 1 / 5;
 }
 
@@ -139,6 +169,12 @@ a .fa {
 .projects {
     height: 100vh;
     overflow-y: auto;
+    color: black;
+}
+
+.projectsFlexContainer {
+    display: flex;
+    flex-flow: row wrap;
 }
 
 .projectItem {
@@ -146,9 +182,9 @@ a .fa {
     flex-flow: row wrap;
     padding: 0px;
     margin: 50px;
-    border: 2px solid white; 
+    /* border: 2px solid white; */ 
     box-shadow: 0px 10px 18px #888888;
-    background-color: #404552;
+    background-color: #ffffff;
 }
 
 .todoLinks {
@@ -192,7 +228,7 @@ a .fa {
 
 .projectButton {
     border: none;
-    border-radius: 6px;
+    border-radius: 2rem;
     text-align: center;
     font-size: 18px;
     letter-spacing: 1px;

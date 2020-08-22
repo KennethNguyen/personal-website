@@ -2,7 +2,7 @@ import {createImage, createRight, linkDiv} from './projectTemplate.js';
 
 const projects = () => {
     // Change background of Projects section to a shade of black - River Bed
-    (document.querySelector('.showcase')).style.backgroundColor = "#444d56";
+    (document.querySelector('.showcase')).style.backgroundColor = "#fff9e3";
 
     // Create the title for Projects section
     const projectsSection = document.createElement('div');

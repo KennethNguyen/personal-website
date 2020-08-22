@@ -1,6 +1,6 @@
 const aboutMe = () => {
     // Change background of About Me section to a shade of black - Cape Cod
-    (document.querySelector('.showcase')).style.backgroundColor = '#19443c';
+    (document.querySelector('.showcase')).style.backgroundColor = '#fff9e3';
 
     // Create the title for About Me section
     const aboutSection = document.createElement('div');
@@ -66,6 +66,7 @@ const aboutMe = () => {
 
     topGames.append(topGamesTitle, hollowKnight, celeste, darkSouls);
     
+    /*
     // Lofi Hip Hop Youtube Video
     const lofi = document.createElement('iframe');
     lofi.src="https://www.youtube.com/embed/hHW1oY26kxQ";
@@ -73,12 +74,13 @@ const aboutMe = () => {
     lofi.style.minWidth = '600px';
     lofi.style.height = 'auto';
     lofi.style.minHeight = '260px';
-
+    */
     // Append all content elements to grid
     aboutGrid.append(personalSelf, hobbies, topGames);
 
     // Append grid and lofi music video to About Me div
-    aboutSection.append(sectionTitle, aboutGrid, lofi);
+    aboutSection.append(sectionTitle, aboutGrid);
+    // aboutSection.append(sectionTitle, aboutGrid, lofi);
     
     (document.querySelector('.showcase')).appendChild(aboutSection);
 }
