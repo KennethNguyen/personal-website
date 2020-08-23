@@ -77,12 +77,13 @@ a .fa {
 }
 
 .fa:hover {
-    text-shadow: 0px 0px 26px black;
+    color: #16d0ff;
+    transition: 0.25s ease-out;
 }
 
 @media (max-width: 768px) {
     body {
-        flex-direction: column;
+        display: block;
     }
 
     .header {
@@ -234,7 +235,7 @@ a .fa {
     letter-spacing: 1px;
     padding: 9px 15px 9px 15px;
     margin: 5px 0px 5px 0px;    
-    transition-duration: 0.3s;
+    transition-duration: 0.25s;
 }
 
 .projectButton:hover {
@@ -251,10 +252,10 @@ a .fa {
 }
 
 .projectCodeButton {
-    background-color: #7ee2b6;
-    color: #141414;
+    background-color: #7fffd4;
+    color: #000000;
 }
 
 .projectCodeButton:hover {
-    background-color: #98fcd0;
+    background-color: #a2ffe0;
 }
