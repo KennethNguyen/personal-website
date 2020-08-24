@@ -28,7 +28,7 @@ const projects = () => {
     todoRightSection.classList.add('rightSection');
     const [todoTitle, todoDescription, todoSkills] = createRight('Todo List',
                                   'A todo list for users to add tasks to a list and keep track of which tasks need to be done',
-                                  'Utilized: React.js, JavaScript, CSS'
+                                  'Utilized: React, JavaScript, CSS'
     );
 
     const todoLinks = document.createElement('div');
@@ -56,7 +56,7 @@ const projects = () => {
     weatherRightSection.classList.add('rightSection');
     const [weatherTitle, weatherDescription, weatherSkills] = createRight('Weather',
                                   'A weather app to determine the weather of any place in the world using OpenWeatherMap API',
-                                  'Utilized: React.js, JavaScript, Bootstrap/CSS'
+                                  'Utilized: React, JavaScript, Bootstrap/CSS'
     );
 
     const weatherLinks = document.createElement('div');
@@ -152,36 +152,62 @@ const projects = () => {
 
     ticProject.append(ticLeftSection, ticRightSection);
 
-    // Calculator Element
-    const calculatorProject = document.createElement('div');
-    calculatorProject.classList.add('calculatorProject', 'projectItem');
+    // Notes Element
+    const notesProject = document.createElement('div');
+    notesProject.classList.add('notesProject', 'projectItem');
 
-    // Calculator Left Section (Image)
-    const calculatorLeftSection = document.createElement('div');
-    calculatorLeftSection.classList.add('leftSection');
-    calculatorLeftSection.append(createImage("./images/exampleCalculator.png"));   
+    // Notes Left Section (Image)
+    const notesLeftSection = document.createElement('div');
+    notesLeftSection.classList.add('leftSection');
+    notesLeftSection.append(createImage("./images/exampleNotes.png"));   
 
-    // Calculator Right Section (Title, Description, Utilized, Links)    
-    const calculatorRightSection = document.createElement('div');
-    calculatorRightSection.classList.add('rightSection');
-    const [calculatorTitle, calculatorDescription, calculatorSkills] = createRight('Calculator',
-                                  'A basic four function calculator',
-                                  'Utilized: HTML, JavaScript, CSS'
+    // Notes Right Section (Title, Description, Utilized, Links)    
+    const notesRightSection = document.createElement('div');
+    notesRightSection.classList.add('rightSection');
+    const [notesTitle, notesDescription, notesSkills] = createRight('Notes',
+                                  'A RESTful, full-stack CRUD notes web application',
+                                  'Utilized: Py4Web, Vue.js, SQLite (through DAL connection), Bulma/CSS'
     );  
 
-    const calculatorLinks = document.createElement('div');
-    calculatorLinks.classList.add('linksContainer');
-    const [calculatorLive, calculatorCode] = linkDiv('https://kennethnguyen.github.io/calculator/',
-                                         'https://github.com/KennethNguyen/calculator'
+    const notesLinks = document.createElement('div');
+    notesLinks.classList.add('linksContainer');
+    const [, notesCode] = linkDiv('', 'https://github.com/KennethNguyen/py4web-notes-app');
+
+    notesLinks.append(notesCode);
+    notesRightSection.append(notesTitle, notesDescription, notesSkills, notesLinks);
+
+    notesProject.append(notesLeftSection, notesRightSection)
+
+    // Covid Element
+    const covidProject = document.createElement('div');
+    covidProject.classList.add('covidProject', 'projectItem');
+
+    // Covid Left Section (Image)
+    const covidLeftSection = document.createElement('div');
+    covidLeftSection.classList.add('leftSection');
+    covidLeftSection.append(createImage("./images/exampleCOVID19.png"));   
+
+    // Covid Right Section (Title, Description, Utilized, Links)    
+    const covidRightSection = document.createElement('div');
+    covidRightSection.classList.add('rightSection');
+    const [covidTitle, covidDescription, covidSkills] = createRight('COVID19 US Tracker',
+                                  'A COVID-19 tracker that visualizes the statistics (total positive cases, recoveries, and deaths) of COVID-19 data in the United States provided by the COVID Tracking Project API. ',
+                                  'Utilized: React, Material-UI, Chart.js, COVID Tracking Project API'
+    );  
+
+    const covidLinks = document.createElement('div');
+    covidLinks.classList.add('linksContainer');
+    const [covidLive, covidCode] = linkDiv('https://covid19-us-tracker-visual.herokuapp.com/',
+                                    'https://github.com/KennethNguyen/COVID19-US-tracker'
     );
 
-    calculatorLinks.append(calculatorLive, calculatorCode);
-    calculatorRightSection.append(calculatorTitle, calculatorDescription, calculatorSkills, calculatorLinks);
+    covidLinks.append(covidLive, covidCode);
+    covidRightSection.append(covidTitle, covidDescription, covidSkills, covidLinks);
 
-    calculatorProject.append(calculatorLeftSection, calculatorRightSection)
+    covidProject.append(covidLeftSection, covidRightSection)
 
     // Append all project elements to the flexbox
-    projectsFlexContainer.append(todoProject, weatherProject, redditProject, libraryProject, ticProject, calculatorProject);
+    projectsFlexContainer.append(covidProject, notesProject, redditProject, todoProject, weatherProject, libraryProject, ticProject);
 
     projectsSection.append(sectionTitle, projectsFlexContainer);
 

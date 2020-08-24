@@ -104,7 +104,7 @@ a .fa {
 .aboutMe {
     height: 100vh;
     overflow-y: auto;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
 }
 
 .aboutGrid {
@@ -115,9 +115,9 @@ a .fa {
 }
 
 .aboutElement {
-    background-color: #fbf1ca;
+    background-color: #f8e4b0; /* fbf1ca */
     box-shadow: 0px 10px 18px #888888;
-    border: 5px solid white;
+    /* border: 5px solid white; */
     margin: 1rem;
     border-radius: 16px;
 }
