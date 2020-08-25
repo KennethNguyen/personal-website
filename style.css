@@ -100,7 +100,7 @@ a .fa {
     opacity: 0.9;
 }
 
-/* About Me */
+/* ABOUT ME SECTION */
 .aboutMe {
     height: 100vh;
     overflow-y: auto;
@@ -115,11 +115,11 @@ a .fa {
 }
 
 .aboutElement {
-    background-color: #f8e4b0; /* fbf1ca */
+    background-color: #fff3c3; /* fbf1ca  fff3c3 */
     box-shadow: 0px 10px 18px #888888;
     /* border: 5px solid white; */
     margin: 1rem;
-    border-radius: 16px;
+    border-radius: 1rem;
 }
 
 #personalSelf {
@@ -144,10 +144,15 @@ a .fa {
     font-size: 18px;
 }
 
-/* Resume */
+/* RESUME SECTION */
 .resume {
     height: 100vh;
     overflow-y: auto;
+}
+
+.resumePDF {
+    height: 80%;
+    box-shadow: 0px 8px 18px #888888;
 }
 
 .userLinks {
@@ -166,7 +171,7 @@ a .fa {
     text-decoration: underline;
 }
 
-/* Projects */
+/* PROJECTS SECTION */
 .projects {
     height: 100vh;
     overflow-y: auto;

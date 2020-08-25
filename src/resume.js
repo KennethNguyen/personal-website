@@ -31,8 +31,8 @@ const resume = () => {
     const resumePDF = document.createElement('embed');
     resumePDF.classList.add('resumePDF');
     resumePDF.src = "KennethNguyen-Resume.pdf";
-    resumePDF.style.maxHeight = '800'
-    resumePDF.height = '800';
+    resumePDF.style.maxHeight = '775'
+    resumePDF.height = '775';
     resumePDF.width = '80%';
 
     // Append all elements together to the resume section

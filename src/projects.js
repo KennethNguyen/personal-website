@@ -165,7 +165,7 @@ const projects = () => {
     const notesRightSection = document.createElement('div');
     notesRightSection.classList.add('rightSection');
     const [notesTitle, notesDescription, notesSkills] = createRight('Notes',
-                                  'A RESTful, full-stack CRUD notes web application',
+                                  'A full-stack CRUD notes web application',
                                   'Utilized: Py4Web, Vue.js, SQLite (through DAL connection), Bulma/CSS'
     );  
 
