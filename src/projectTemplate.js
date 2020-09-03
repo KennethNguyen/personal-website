@@ -1,3 +1,10 @@
+// Create project title
+const createTitle = (projectTitle) => {
+    const title = document.createElement('h2');
+    title.classList.add('projectTitle');
+    title.innerHTML = projectTitle;
+}
+
 // Create project image
 const createImage = (imageSrc) => {
     const image = document.createElement('img');
@@ -49,4 +56,4 @@ const linkHelper = (link, buttonDescription, buttonClass) => {
     return websiteLink;
 }
 
-export {createImage, createRight, linkDiv};
+export {createTitle, createImage, createRight, linkDiv};

@@ -154,7 +154,7 @@ const projects = () => {
 
     // Notes Element
     const notesProject = document.createElement('div');
-    notesProject.classList.add('notesProject', 'projectItem');
+    notesProject.classList.add('projectItem');
 
     // Notes Left Section (Image)
     const notesLeftSection = document.createElement('div');
@@ -165,7 +165,7 @@ const projects = () => {
     const notesRightSection = document.createElement('div');
     notesRightSection.classList.add('rightSection');
     const [notesTitle, notesDescription, notesSkills] = createRight('Notes',
-                                  'A full-stack CRUD notes web application',
+                                  'A RESTful, full-stack CRUD notes web application',
                                   'Utilized: Py4Web, Vue.js, SQLite (through DAL connection), Bulma/CSS'
     );  
 
@@ -180,7 +180,7 @@ const projects = () => {
 
     // Covid Element
     const covidProject = document.createElement('div');
-    covidProject.classList.add('covidProject', 'projectItem');
+    covidProject.classList.add('projectItem');
 
     // Covid Left Section (Image)
     const covidLeftSection = document.createElement('div');
@@ -207,7 +207,7 @@ const projects = () => {
     covidProject.append(covidLeftSection, covidRightSection)
 
     // Append all project elements to the flexbox
-    projectsFlexContainer.append(covidProject, notesProject, redditProject, todoProject, weatherProject, libraryProject, ticProject);
+    projectsFlexContainer.append(covidProject, redditProject, todoProject, weatherProject, libraryProject, ticProject, notesProject);
 
     projectsSection.append(sectionTitle, projectsFlexContainer);
 
