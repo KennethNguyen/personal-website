@@ -3,10 +3,12 @@ const createTitle = (projectTitle) => {
     const title = document.createElement('h2');
     title.classList.add('projectTitle');
     title.innerHTML = projectTitle;
+    return title;
 }
 
 // Create project image
 const createImage = (imageSrc) => {
+    const imageContainer = document.createElement('div');
     const image = document.createElement('img');
     image.classList.add('projectScreenshot');
     image.src = imageSrc;
@@ -14,46 +16,48 @@ const createImage = (imageSrc) => {
     image.style.minHeight = '50vmin';
     image.style.width = '100%';
     image.style.height = '100%';
-    return image;
+    imageContainer.append(image);
+    return imageContainer;
 }
 
-// Create the right section of a project container (Title, Description, Utilized, Links)
-const createRight = (projectTitle, projectDescription, projectSkills) => {
-    const title = document.createElement('h2');
-    title.classList.add('projectTitle');
-    title.innerHTML = projectTitle;
-    
+// Create the description/skills section of a project
+const createDescription = (projectDescription, projectSkills) => {
     const description = document.createElement('p');
     description.innerHTML = projectDescription;
     
     const skills = document.createElement('p');
     skills.innerHTML = projectSkills;
 
-    return [title, description, skills];
+    return [description, skills];
 }
 
-// Specifies the link of the button, the description of the button, and appropriate class attribute
-const linkDiv = (projectDemo, projectSource) => {
-    const demo = linkHelper(projectDemo, 'Live Demo', 'projectLiveButton');
-    
-    const sourceCode = linkHelper(projectSource, 'Source Code', 'projectCodeButton');
+// Create a links container that includes the live demo button and the source code button (if provided)
+const createLinks = (projectDemo, projectSource) => {
+    const linksContainer = document.createElement('div');
+    linksContainer.classList.add('linksContainer');
 
-    return [demo, sourceCode];
+    const demo = createLinksHelper(projectDemo, 'Live Demo', 'projectLiveButton');
+    
+    const sourceCode = createLinksHelper(projectSource, 'Source Code', 'projectCodeButton');
+
+    linksContainer.append(demo, sourceCode);
+
+    return linksContainer;
 }
 
 // Create a link button with onclick to either the project's live demo or source code
-const linkHelper = (link, buttonDescription, buttonClass) => {
-    const websiteLink = document.createElement('a');
-    websiteLink.classList.add('projectLink');
-    websiteLink.href = link;
-    websiteLink.target = '_blank';
+const createLinksHelper = (link, buttonDescription, buttonClass) => {
+    const projectLink = document.createElement('a');
+    projectLink.classList.add('projectLink');
+    projectLink.href = link;
+    projectLink.target = '_blank';project
     
     const linkButton = document.createElement('button');
     linkButton.classList.add('projectButton', `${buttonClass}`);
     linkButton.innerHTML = buttonDescription;
-    websiteLink.append(linkButton);
+    projectLink.append(linkButton);
     
-    return websiteLink;
+    return projectLink;
 }
 
-export {createTitle, createImage, createRight, linkDiv};
+export {createTitle, createImage, createDescription, createLinks};

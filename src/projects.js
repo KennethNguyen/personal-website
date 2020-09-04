@@ -1,210 +1,145 @@
-import {createImage, createRight, linkDiv} from './projectTemplate.js';
+import {createTitle, createImage, createDescription, createLinks} from './projectTemplate.js';
 
 const projects = () => {
-    // Change background of Projects section to a shade of black - River Bed
+    // Change background of Projects section
     (document.querySelector('.showcase')).style.backgroundColor = "#fff9e3";
 
-    // Create the title for Projects section
+    // Create the section title for Projects section
     const projectsSection = document.createElement('div');
     projectsSection.classList.add('projects');
 
     const sectionTitle = document.createElement('h1');
     sectionTitle.innerHTML = 'Projects';
 
+    // Create the flex container for all the project cards/elements
     const projectsFlexContainer = document.createElement('div');
     projectsFlexContainer.classList.add('projectsFlexContainer');
 
-    // Todo List Element
+    // Todo List Project Main Div Element
     const todoProject = document.createElement('div');
     todoProject.classList.add('projectItem');
 
-    // Todo Left Section (Image)
-    const todoLeftSection = document.createElement('div');
-    todoLeftSection.classList.add('leftSection');
-    todoLeftSection.append(createImage('./images/exampleTodo.png'));
-
-    // Todo Right Section (Title, Description, Utilized, Links)
-    const todoRightSection = document.createElement('div');
-    todoRightSection.classList.add('rightSection');
-    const [todoTitle, todoDescription, todoSkills] = createRight('Todo List',
-                                  'A todo list for users to add tasks to a list and keep track of which tasks need to be done',
-                                  'Utilized: React, JavaScript, CSS'
+    const todoTitle = createTitle('Todo List');
+    const todoImage = createImage('./images/exampleTodo.png');
+    const [todoDescription, todoSkills] = createDescription(
+        'A todo list for users to add tasks to a list and keep track of which tasks need to be done',
+        'Utilized: React, JavaScript, CSS'
+    );
+    const todoLinks = createLinks(
+        'https://kennethnguyen.github.io/todo-list/',
+        'https://github.com/KennethNguyen/todo-list'
     );
 
-    const todoLinks = document.createElement('div');
-    todoLinks.classList.add('linksContainer');
-    const [todoLive, todoCode] = linkDiv('https://kennethnguyen.github.io/todo-list/',
-                                         'https://github.com/KennethNguyen/todo-list'
-    );
+    // Append all Todo project elements to main project div
+    todoProject.append(todoTitle, todoImage, todoDescription, todoSkills, todoLinks);
 
-    todoLinks.append(todoLive, todoCode);
-    todoRightSection.append(todoTitle, todoDescription, todoSkills, todoLinks);
-
-    todoProject.append(todoLeftSection, todoRightSection);
-
-    // Weather App Element
+    // Weather App Project Main Div Element
     const weatherProject = document.createElement('div');
     weatherProject.classList.add('projectItem');
 
-    // Weather Left Section (Image)
-    const weatherLeftSection = document.createElement('div');
-    weatherLeftSection.classList.add('leftSection');
-    weatherLeftSection.append(createImage("./images/exampleWeather.png"));
-
-    // Weather Right Section (Title, Description, Utilized, Links)
-    const weatherRightSection = document.createElement('div');
-    weatherRightSection.classList.add('rightSection');
-    const [weatherTitle, weatherDescription, weatherSkills] = createRight('Weather',
-                                  'A weather app to determine the weather of any place in the world using OpenWeatherMap API',
-                                  'Utilized: React, JavaScript, Bootstrap/CSS'
+    const weatherTitle = createTitle('Weather');
+    const weatherImage = createImage("./images/exampleWeather.png");
+    const [weatherDescription, weatherSkills] = createDescription(
+        'A weather app to determine the weather of any place in the world using OpenWeatherMap API',
+        'Utilized: React, JavaScript, Bootstrap/CSS'
     );
-
-    const weatherLinks = document.createElement('div');
-    weatherLinks.classList.add('linksContainer');
-    const [weatherLive, weatherCode] = linkDiv('https://kennethnguyen.github.io/weather-app/',
-                                         'https://github.com/KennethNguyen/weather-app'
+    const weatherLinks = createLinks(
+        'https://kennethnguyen.github.io/weather-app/',
+        'https://github.com/KennethNguyen/weather-app'
     );
-
-    weatherLinks.append(weatherLive, weatherCode);
-    weatherRightSection.append(weatherTitle, weatherDescription, weatherSkills, weatherLinks);
     
-    weatherProject.append(weatherLeftSection, weatherRightSection);
+    // Append all Weather project elements to main project div
+    weatherProject.append(weatherTitle, weatherImage, weatherDescription, weatherSkills, weatherLinks);
 
-    // Library Element
+    // Library Project Main Div Element
     const libraryProject = document.createElement('div');
     libraryProject.classList.add('projectItem');
 
-    // Library Left Section (Image)
-    const libraryLeftSection = document.createElement('div');
-    libraryLeftSection.classList.add('leftSection');
-    libraryLeftSection.append(createImage("./images/exampleLibrary.png"));
-
-    // Library Right Section (Title, Description, Utilized, Links)
-    const libraryRightSection = document.createElement('div');
-    libraryRightSection.classList.add('rightSection');
-    const [libraryTitle, libraryDescription, librarySkills] = createRight('Library',
-                                  'A library for users to keep track of their books',
-                                  'Utilized: Utilized: HTML, JavaScript, CSS'
+    const libraryTitle = createTitle('Library');
+    const libraryImage = createImage("./images/exampleLibrary.png");
+    const [libraryDescription, librarySkills] = createDescription(
+        'A library for users to keep track of their books',
+        'Utilized: Utilized: HTML, JavaScript, CSS'
+    );
+    const libraryLinks = createLinks(
+        'https://kennethnguyen.github.io/library/',
+        'https://github.com/KennethNguyen/library'
     );
 
-    const libraryLinks = document.createElement('div');
-    libraryLinks.classList.add('linksContainer');
-    const [libraryLive, libraryCode] = linkDiv('https://kennethnguyen.github.io/library/',
-                                         'https://github.com/KennethNguyen/library'
-    );
+    // Append all Library project elements to main project div
+    libraryProject.append(libraryTitle, libraryImage, libraryDescription, librarySkills, libraryLinks);
 
-    libraryLinks.append(libraryLive, libraryCode);
-    libraryRightSection.append(libraryTitle, libraryDescription, librarySkills, libraryLinks);
-
-    libraryProject.append(libraryLeftSection, libraryRightSection);
-
-    // Reddit FMF Script Element
+    // Reddit FMF Script Main Div Element
     const redditProject = document.createElement('div');
     redditProject.classList.add('projectItem');
 
-    // Reddit FMF Script Left Section (Image)
-    const redditLeftSection = document.createElement('div');
-    redditLeftSection.classList.add('leftSection');
-    redditLeftSection.append(createImage("./images/exampleScript.png"));
-
-    // Reddit FMF Script Right Section (Title, Description, Utilized, Links)
-    const redditRightSection = document.createElement('div');
-    redditRightSection.classList.add('rightSection');
-    const [redditTitle, redditDescription, redditSkills] = createRight('Reddit FMF Deal Scraper',
-                                                                'A script that scrapes /r/frugalmalefashion for deals and notifies the Reddit user of said deals in a Private Message',
-                                                                'Utilized: Python, PRAW (Python Reddit API Wrapper)'
+    const redditTitle = createTitle('Reddit FMF Deal Scraper');
+    const redditImage = createImage("./images/exampleScript.png");
+    const [redditDescription, redditSkills] = createDescription(
+        'A script that scrapes /r/frugalmalefashion for deals and notifies the Reddit user of said deals in a Private Message',
+        'Utilized: Python3, PRAW (Python Reddit API Wrapper)'
+    );
+    const redditLinks = createLinks(
+        '', 
+        'https://github.com/KennethNguyen/reddit-fmf-deal-scraper'
     );
 
-    const redditLinks = document.createElement('div');
-    redditLinks.classList.add('linksContainer');
-    const [, redditCode] = linkDiv('', 'https://github.com/KennethNguyen/reddit-fmf-deal-scraper');
+    // Append all Reddit FMF Script project elements to main project div
+    redditProject.append(redditTitle, redditImage, redditDescription, redditSkills, redditLinks);
 
-    redditLinks.append(redditCode);
-    redditRightSection.append(redditTitle, redditDescription, redditSkills, redditLinks);
-    
-    redditProject.append(redditLeftSection, redditRightSection);
-
-    // Tic-Tac-Toe Element
+    // Tic-Tac-Toe Project Main Div Element
     const ticProject = document.createElement('div');
     ticProject.classList.add('projectItem');
-
-    // Tic-Tac-Toe Left Section (Image)
-    const ticLeftSection = document.createElement('div');
-    ticLeftSection.classList.add('leftSection');
-    ticLeftSection.append(createImage("./images/exampleTicTacToe.png"));    
-
-    // Tic-Tac-Toe Right Section (Title, Description, Utilized, Links)
-    const ticRightSection = document.createElement('div');
-    ticRightSection.classList.add('rightSection');
-    const [ticTitle, ticDescription, ticSkills] = createRight('Tic-Tac-Toe',
-                                  'A tic-tac-toe game able to play with 2 players',
-                                  'Utilized: HTML, JavaScript, CSS'
+    
+    const ticTitle = createTitle('Tic-Tac-Toe');
+    const ticImage = createImage("./images/exampleTicTacToe.png");    
+    const [ticDescription, ticSkills] = createDescription(
+        'A tic-tac-toe game able to play with 2 players',
+        'Utilized: HTML, JavaScript, CSS'
+    );
+    const ticLinks = createLinks(
+        'https://kennethnguyen.github.io/tic-tac-toe/',
+        'https://github.com/KennethNguyen/tic-tac-toe'
     );
 
-    const ticLinks = document.createElement('div');
-    ticLinks.classList.add('linksContainer');
-    const [ticLive, ticCode] = linkDiv('https://kennethnguyen.github.io/tic-tac-toe/',
-                                         'https://github.com/KennethNguyen/tic-tac-toe'
-    );
-   
-    ticLinks.append(ticLive, ticCode);
-    ticRightSection.append(ticTitle, ticDescription, ticSkills, ticLinks);
+    // Append all Tic-Tac-Toe project elements to main project div
+    ticProject.append(ticTitle, ticImage, ticDescription, ticSkills, ticLinks);
 
-    ticProject.append(ticLeftSection, ticRightSection);
-
-    // Notes Element
+    // Notes Project Main Div Element
     const notesProject = document.createElement('div');
     notesProject.classList.add('projectItem');
 
-    // Notes Left Section (Image)
-    const notesLeftSection = document.createElement('div');
-    notesLeftSection.classList.add('leftSection');
-    notesLeftSection.append(createImage("./images/exampleNotes.png"));   
+    const notesTitle = createTitle('Notes');
+    const notesImage = createImage("./images/exampleNotes.png"); 
+    const [notesDescription, notesSkills] = createDescription(
+        'A RESTful, full-stack CRUD notes web application',
+        'Utilized: Py4Web, Vue.js, SQLite (through DAL connection), Bulma/CSS'
+    );
+    const notesLinks = createLinks(
+        '',
+        'https://github.com/KennethNguyen/py4web-notes-app'
+    );
 
-    // Notes Right Section (Title, Description, Utilized, Links)    
-    const notesRightSection = document.createElement('div');
-    notesRightSection.classList.add('rightSection');
-    const [notesTitle, notesDescription, notesSkills] = createRight('Notes',
-                                  'A RESTful, full-stack CRUD notes web application',
-                                  'Utilized: Py4Web, Vue.js, SQLite (through DAL connection), Bulma/CSS'
-    );  
+    // Append all Notes project elements to main project div
+    notesProject.append(notesTitle, notesImage, notesDescription, notesSkills, notesLinks)
 
-    const notesLinks = document.createElement('div');
-    notesLinks.classList.add('linksContainer');
-    const [, notesCode] = linkDiv('', 'https://github.com/KennethNguyen/py4web-notes-app');
-
-    notesLinks.append(notesCode);
-    notesRightSection.append(notesTitle, notesDescription, notesSkills, notesLinks);
-
-    notesProject.append(notesLeftSection, notesRightSection)
-
-    // Covid Element
+    // Covid Project Main Div Element
     const covidProject = document.createElement('div');
     covidProject.classList.add('projectItem');
 
-    // Covid Left Section (Image)
-    const covidLeftSection = document.createElement('div');
-    covidLeftSection.classList.add('leftSection');
-    covidLeftSection.append(createImage("./images/exampleCOVID19.png"));   
-
-    // Covid Right Section (Title, Description, Utilized, Links)    
-    const covidRightSection = document.createElement('div');
-    covidRightSection.classList.add('rightSection');
-    const [covidTitle, covidDescription, covidSkills] = createRight('COVID19 US Tracker',
-                                  'A COVID-19 tracker that visualizes the statistics (total positive cases, recoveries, and deaths) of COVID-19 data in the United States provided by the COVID Tracking Project API. ',
-                                  'Utilized: React, Material-UI, Chart.js, COVID Tracking Project API'
+    const covidTitle = createTitle('COVID-19 US Tracker')
+    const covidImage = createImage("./images/exampleCOVID19.png");   
+    const [covidDescription, covidSkills] = createDescription(
+        'A COVID-19 tracker that visualizes the statistics (total positive cases, recoveries, and deaths) of COVID-19 data in the United States provided by the COVID Tracking Project API. ',
+        'Utilized: React, Material-UI, Chart.js, COVID Tracking Project API'
     );  
-
-    const covidLinks = document.createElement('div');
-    covidLinks.classList.add('linksContainer');
-    const [covidLive, covidCode] = linkDiv('https://covid19-us-tracker-visual.herokuapp.com/',
-                                    'https://github.com/KennethNguyen/COVID19-US-tracker'
+    const covidLinks = createLinks(
+        'https://covid19-us-tracker-visual.herokuapp.com/',
+        'https://github.com/KennethNguyen/COVID19-US-tracker'
     );
 
-    covidLinks.append(covidLive, covidCode);
-    covidRightSection.append(covidTitle, covidDescription, covidSkills, covidLinks);
-
-    covidProject.append(covidLeftSection, covidRightSection)
+    // Append all Covid project elements to main project div
+    covidProject.append(covidTitle, covidImage, covidDescription, covidSkills, covidLinks)
 
     // Append all project elements to the flexbox
     projectsFlexContainer.append(covidProject, redditProject, todoProject, weatherProject, libraryProject, ticProject, notesProject);

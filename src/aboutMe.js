@@ -37,7 +37,7 @@ const aboutMe = () => {
 
     const hobbiesText = document.createElement('p');
     hobbiesText.classList.add('aboutText');
-    hobbiesText.innerHTML = "Outside of programming and school, my favorite thing to do is discover new songs and jam out to music. The main genres of music I listen to are hip-hop/rap, lo-fi hip hop, and EDM. I enjoy sports and usually watch the NBA and NFL during their respective playoff seasons. Not too long ago, I started gaining an interest in JDM cars and enjoy learning about car culture and performance aspects. I am also an avid gamer and especially hooked onto the Metroidvania, Soulsborne, and Platformer genres. Off of the screens, I like cooking because I can experiment with different recipes and ingredients to refine flavors and discover new tastes."
+    hobbiesText.innerHTML = "Outside of programming and school, my favorite thing to do is discover new songs and jam out to music. The main genres of music I listen to are hip-hop/rap, lo-fi hip hop, and EDM. I enjoy sports and usually watch the NBA and NFL during their playoff seasons. Not too long ago, I started gaining an interest in JDM cars and enjoy learning about car culture and performance aspects. I am also an avid gamer and especially hooked onto the Metroidvania, Soulsborne, and Platformer genres. Off the screens, I like cooking because I can experiment with different recipes and ingredients to refine flavors and discover new tastes."
 
     hobbies.append(hobbiesTitle, hobbiesText);
 
