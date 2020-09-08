@@ -1,9 +1,7 @@
 /* Look into refactoring css code */
-/* Look into changing color palette to blue / red / green / black / gray mix */
 /* Color Palette
     body -> fff9e3 -> cosmic latte
     header -> fbf1ca -> darker shade of background
-    
     
     Peach color palette -> https://www.color-hex.com/color-palette/6060
 */
@@ -12,7 +10,7 @@ body {
     display: flex;
     flex-direction: row;
     margin: 0px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     height: 100%;
     min-height: 100vh;
     overflow: hidden;
@@ -57,7 +55,7 @@ li {
 }
 
 li:hover {
-    background-color: #FADAA5; /* salmon */
+    background-color: #FADAA5;
     border-radius: 2rem;
     cursor: pointer;
 }
@@ -115,7 +113,7 @@ a .fa {
 }
 
 .aboutElement {
-    background-color: #fff3c3; /* fbf1ca  fff3c3 */
+    background-color: #fae6c6; /* fbf1ca  fff3c3 FADAA5 */ 
     box-shadow: 0px 10px 18px #888888;
     /* border: 5px solid white; */
     margin: 1rem;

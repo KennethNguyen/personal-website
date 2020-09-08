@@ -23,7 +23,7 @@ const aboutMe = () => {
 
     const personalText = document.createElement('p');
     personalText.classList.add('aboutText');
-    personalText.innerHTML = "I am a fourth year B.S. Computer Science major at University of California, Santa Cruz. Driven and focused, I like to see exceptional results and strive to produce such results. While working on a project, I think about ways to optimize or further improve any component of the project for performance reasons and for the consumer's usage. Typically, I make notes on what I want to implement next on a project if I do not get to it. I am constantly learning new technology skills and improving myself as a programmer. My interests lie in learning and discovering new technologies and being able to deploy software that people want to use to help themselves, others, or the environment."
+    personalText.innerHTML = "My name has been all over this website a lot but just so there's no confusion on who I am, I am Kenneth. I'm currently a fourth year B.S. Computer Science major at University of California, Santa Cruz. I enjoy learning about anything and everything, from how to perfectly toast toast (you read that right) to how to speedrun creating a full-stack RESTful To-Do App. I am an aspiring full-stack web developer but moreso a front-end enthusiast. I am constantly learning new technologies and skills and improving myself as a programmer. As a developer, my interests lie in creating applications that people will want to use to help themselves, others, and/or the environment."
 
     personalSelf.append(personalTitle, personalText);
 
@@ -37,7 +37,7 @@ const aboutMe = () => {
 
     const hobbiesText = document.createElement('p');
     hobbiesText.classList.add('aboutText');
-    hobbiesText.innerHTML = "Outside of programming and school, my favorite thing to do is discover new songs and jam out to music. The main genres of music I listen to are hip-hop/rap, lo-fi hip hop, and EDM. I enjoy sports and usually watch the NBA and NFL during their playoff seasons. Not too long ago, I started gaining an interest in JDM cars and enjoy learning about car culture and performance aspects. I am also an avid gamer and especially hooked onto the Metroidvania, Soulsborne, and Platformer genres. Off the screens, I like cooking because I can experiment with different recipes and ingredients to refine flavors and discover new tastes."
+    hobbiesText.innerHTML = "I like to code, it's honestly relaxing and fun to work on side projects but there are a lot of other activities I enjoy. One of my favorite things to do is listen to music, specifically hip-hop/rap, EDM, and lo-fi beats, but I am open to all music types except country. I usually watch the NBA and NFL during their playoff seasons and my pick for the NBA 2020 Champions are the Lakers (hopefully this ages well). Not too long ago, I started gaining an interest in JDM cars and enjoy learning about car culture and performance aspects. I am also an avid gamer and especially hooked onto the Metroidvania, Soulsborne, and Platformer genres. Off the screens, I like cooking because I can expand my taste buds trying different recipes and find new ways to minimize burning down my house."
 
     hobbies.append(hobbiesTitle, hobbiesText);
 
