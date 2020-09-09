@@ -31,6 +31,8 @@ const resume = () => {
     const resumePDF = document.createElement('embed');
     resumePDF.classList.add('resumePDF');
     resumePDF.src = "KennethNguyen-Resume.pdf";
+    resumePDF.type = "application/pdf";
+    resumePDF.alt = "PDF format of Resume. Click above links to view in a new tab or download."
     resumePDF.style.maxHeight = '775'
     resumePDF.height = '775';
     resumePDF.width = '80%';

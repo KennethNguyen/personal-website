@@ -51,19 +51,19 @@ const aboutMe = () => {
 
     const hollowKnight = document.createElement('img');
     hollowKnight.src="./images/hollow-knight-icon.png";
-    hollowKnight.alt="Hollow Knight Game Icon"
+    hollowKnight.alt="Hollow Knight Game Icon";
     hollowKnight.style.width = 'auto';
     hollowKnight.style.height = 'auto';
 
     const celeste = document.createElement('img');
     celeste.src="./images/celeste-icon.png";
-    celeste.alt="Celeste Game Icon"
+    celeste.alt="Celeste Game Icon";
     celeste.style.width = 'auto';
     celeste.style.height = 'auto';
 
     const darkSouls = document.createElement('img');
     darkSouls.src="./images/dark-souls-3-icon.png";
-    darkSouls.alt="Dark Souls Game Icon"
+    darkSouls.alt="Dark Souls Game Icon";
     darkSouls.style.width = 'auto';
     darkSouls.style.height = 'auto';
 
