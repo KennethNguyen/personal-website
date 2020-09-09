@@ -6,7 +6,7 @@ import {resume} from './resume.js';
 // Display projects page upon load
 //projects();
 
-aboutMe();
+resume();
 
 document.getElementById('project').addEventListener('click', function () {
     clearContent();
