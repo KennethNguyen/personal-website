@@ -20,7 +20,7 @@ const projects = () => {
     todoProject.classList.add('projectItem');
 
     const todoTitle = createTitle('Todo List');
-    const todoImage = createImage('./images/exampleTodo.png');
+    const todoImage = createImage('./images/exampleTodo.png', "To-Do App Page");
     const [todoDescription, todoSkills] = createDescription(
         'A todo list for users to add tasks to a list and keep track of which tasks need to be done',
         'Utilized: React, JavaScript, CSS'
@@ -38,7 +38,7 @@ const projects = () => {
     weatherProject.classList.add('projectItem');
 
     const weatherTitle = createTitle('Weather');
-    const weatherImage = createImage("./images/exampleWeather.png");
+    const weatherImage = createImage("./images/exampleWeather.png", "Weather App Page");
     const [weatherDescription, weatherSkills] = createDescription(
         'A weather app to determine the weather of any place in the world using OpenWeatherMap API',
         'Utilized: React, JavaScript, Bootstrap/CSS'
@@ -56,7 +56,7 @@ const projects = () => {
     libraryProject.classList.add('projectItem');
 
     const libraryTitle = createTitle('Library');
-    const libraryImage = createImage("./images/exampleLibrary.png");
+    const libraryImage = createImage("./images/exampleLibrary.png", "Library App Page");
     const [libraryDescription, librarySkills] = createDescription(
         'A library for users to keep track of their books',
         'Utilized: Utilized: HTML, JavaScript, CSS'
@@ -74,7 +74,7 @@ const projects = () => {
     redditProject.classList.add('projectItem');
 
     const redditTitle = createTitle('Reddit FMF Deal Scraper');
-    const redditImage = createImage("./images/exampleScript.png");
+    const redditImage = createImage("./images/exampleScript.png", "Reddit r/frugalmalefashion deal scraper result");
     const [redditDescription, redditSkills] = createDescription(
         'A script that scrapes /r/frugalmalefashion for deals and notifies the Reddit user of said deals in a Private Message',
         'Utilized: Python3, PRAW (Python Reddit API Wrapper)'
@@ -92,7 +92,7 @@ const projects = () => {
     ticProject.classList.add('projectItem');
     
     const ticTitle = createTitle('Tic-Tac-Toe');
-    const ticImage = createImage("./images/exampleTicTacToe.png");    
+    const ticImage = createImage("./images/exampleTicTacToe.png", "Tic-Tac-Toe App Page");    
     const [ticDescription, ticSkills] = createDescription(
         'A tic-tac-toe game able to play with 2 players',
         'Utilized: HTML, JavaScript, CSS'
@@ -110,7 +110,7 @@ const projects = () => {
     notesProject.classList.add('projectItem');
 
     const notesTitle = createTitle('Notes');
-    const notesImage = createImage("./images/exampleNotes.png"); 
+    const notesImage = createImage("./images/exampleNotes.png", "Notes App Page"); 
     const [notesDescription, notesSkills] = createDescription(
         'A RESTful, full-stack CRUD notes web application',
         'Utilized: Py4Web, Vue.js, SQLite (through DAL connection), Bulma/CSS'
@@ -128,7 +128,7 @@ const projects = () => {
     covidProject.classList.add('projectItem');
 
     const covidTitle = createTitle('COVID-19 US Tracker')
-    const covidImage = createImage("./images/exampleCOVID19.png");   
+    const covidImage = createImage("./images/exampleCOVID19.png", "COVID-19 Tracker Page");   
     const [covidDescription, covidSkills] = createDescription(
         'A COVID-19 tracker that visualizes the statistics (total positive cases, recoveries, and deaths) of COVID-19 data in the United States provided by the COVID Tracking Project API. ',
         'Utilized: React, Material-UI, Chart.js, COVID Tracking Project API'

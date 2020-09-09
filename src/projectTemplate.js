@@ -7,11 +7,12 @@ const createTitle = (projectTitle) => {
 }
 
 // Create project image
-const createImage = (imageSrc) => {
+const createImage = (imageSrc, imageAlt) => {
     const imageContainer = document.createElement('div');
     const image = document.createElement('img');
     image.classList.add('projectScreenshot');
     image.src = imageSrc;
+    image.alt = imageAlt;
     image.style.minWidth = '50vmin';
     image.style.minHeight = '50vmin';
     image.style.width = '100%';
