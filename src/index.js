@@ -22,3 +22,28 @@ document.getElementById('resume').addEventListener('click', function () {
     clearContent();
     resume();
 });
+
+
+// document.getElementById('project').addEventListener('click', function () {
+//     document.querySelector('.projects').style.display = "block"
+//     document.querySelector('.aboutMe').style.display = "none"
+//     document.querySelector('.resume').style.display = "none"
+// });
+
+// document.getElementById('about').addEventListener('click', function () {
+//     if (document.querySelector('.aboutMe') == null) {
+//         aboutMe()
+//     }
+//     document.querySelector('.projects').style.display = "none"
+//     document.querySelector('.aboutMe').style.display = "block"
+//     document.querySelector('.resume').style.display = "none"
+// });
+
+// document.getElementById('resume').addEventListener('click', function () {
+//     if (document.querySelector('.resume') == null) {
+//         resume()
+//     }
+//     document.querySelector('.projects').style.display = "none"
+//     document.querySelector('.aboutMe').style.display = "none"
+//     document.querySelector('.resume').style.display = "block"
+// });
