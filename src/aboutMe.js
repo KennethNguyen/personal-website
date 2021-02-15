@@ -23,9 +23,13 @@ const aboutMe = () => {
 
     const personalText = document.createElement('p');
     personalText.classList.add('aboutText');
-    personalText.innerHTML = "My name has been all over this website a lot but just so there's no confusion on who I am, I am Kenneth. I'm currently a fourth year B.S. Computer Science major at University of California, Santa Cruz. I enjoy learning about anything and everything, from how to perfectly toast toast (you read that right) to how to speedrun creating a full-stack RESTful To-Do App. I am an aspiring full-stack web developer but moreso a front-end enthusiast. I am constantly learning new technologies and skills and improving myself as a programmer. As a developer, my interests lie in creating applications that people will want to use to help themselves, others, and/or the environment."
+    personalText.innerHTML = "My name has been all over this website a lot but just so there's no confusion on who I am, my name's Kenneth. I'm currently a fourth year B.S. Computer Science major at University of California, Santa Cruz. I enjoy learning about anything and everything, from how to perfectly toast toast (you read that right) to how to optimize React applications. I am an aspiring full-stack developer but moreso a front-end enthusiast. I am consistently learning new technologies and skills to improve myself as a programmer. As a developer, my interests lie in creating applications that people will enjoy using to help themselves, others, and/or the environment.";
 
-    personalSelf.append(personalTitle, personalText);
+    const jobPlug = document.createElement('p');
+    jobPlug.classList.add('aboutText');
+    jobPlug.innerHTML = "Right now I am looking for a full time software engineering or web development related role!";
+
+    personalSelf.append(personalTitle, personalText, jobPlug);
 
     // Hobbies section
     const hobbies = document.createElement('div');
@@ -37,7 +41,7 @@ const aboutMe = () => {
 
     const hobbiesText = document.createElement('p');
     hobbiesText.classList.add('aboutText');
-    hobbiesText.innerHTML = "I like to code, it's honestly relaxing and fun to work on side projects but there are a lot of other activities I enjoy. One of my favorite things to do is listen to music, specifically hip-hop/rap, EDM, and lo-fi beats, but I am open to all music types except country. I usually watch the NBA and NFL during their playoff seasons and my pick for the NBA 2020 Champions are the Lakers (hopefully this ages well). Not too long ago, I started gaining an interest in JDM cars and enjoy learning about car culture and performance aspects. I am also an avid gamer and especially hooked onto the Metroidvania, Soulsborne, and Platformer genres. Off the screens, I like cooking because I can expand my taste buds trying different recipes and find new ways to minimize burning down my house."
+    hobbiesText.innerHTML = "I like to code, it's honestly relaxing and fun to work on side projects but there are a lot of other activities I enjoy. One of my favorite things to do is listen to music, specifically hip-hop/rap, EDM, lo-fi beats, and R&B but I am open to all music types except country. I usually watch the NBA and NFL during their playoff seasons (pretty surprised to see Tom Brady win another Super Bowl). Not too long ago, I started gaining an interest in JDM cars and enjoy learning about car culture and performance aspects. I am also an avid gamer and especially hooked onto the Metroidvania, Soulsborne, and Platformer genres. I like cooking because I can expand my taste buds trying different recipes and find new ways to minimize burning down my house."
 
     hobbies.append(hobbiesTitle, hobbiesText);
 
@@ -69,21 +73,11 @@ const aboutMe = () => {
 
     topGames.append(topGamesTitle, hollowKnight, celeste, darkSouls);
     
-    /*
-    // Lofi Hip Hop Youtube Video
-    const lofi = document.createElement('iframe');
-    lofi.src="https://www.youtube.com/embed/hHW1oY26kxQ";
-    lofi.style.width = 'auto';
-    lofi.style.minWidth = '600px';
-    lofi.style.height = 'auto';
-    lofi.style.minHeight = '260px';
-    */
     // Append all content elements to grid
     aboutGrid.append(personalSelf, hobbies, topGames);
 
     // Append grid and lofi music video to About Me div
     aboutSection.append(sectionTitle, aboutGrid);
-    // aboutSection.append(sectionTitle, aboutGrid, lofi);
     
     (document.querySelector('.showcase')).appendChild(aboutSection);
 }

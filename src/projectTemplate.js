@@ -51,7 +51,7 @@ const createLinksHelper = (link, buttonDescription, buttonClass) => {
     const projectLink = document.createElement('a');
     projectLink.classList.add('projectLink');
     projectLink.href = link;
-    projectLink.target = '_blank';project
+    projectLink.target = '_blank';
     
     const linkButton = document.createElement('button');
     linkButton.classList.add('projectButton', `${buttonClass}`);
