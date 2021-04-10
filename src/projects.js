@@ -15,6 +15,60 @@ const projects = () => {
     const projectsFlexContainer = document.createElement('div');
     projectsFlexContainer.classList.add('projectsFlexContainer');
 
+    // Frydge Main Div Element
+    const frydgeProject = document.createElement('div');
+    frydgeProject.classList.add('projectItem');
+
+    const frydgeTitle = createTitle('Frydge');
+    const frydgeImage = createImage("./images/exampleFrydge.png", "Frydge Splash Page");
+    const [frydgeDescription, frydgeSkills] = createDescription(
+        'A web app for users to keep track of existing groceries and their expiration dates, prices, etc. in one or more households. Supports multiple concurrent users, has realtime updates, and is mobile responsive!',
+        'Technologies: React, Context API, Ant-Design, Firebase Authentication, Cloud Firestore, Jira'
+    );
+    const frydgeLinks = createLinks(
+        'https://frydge.me', 
+        ''
+    );
+
+    // Append all Frydge project elements to main project div
+    frydgeProject.append(frydgeTitle, frydgeImage, frydgeDescription, frydgeSkills, frydgeLinks);
+
+    // Covid Project Main Div Element
+    const covidProject = document.createElement('div');
+    covidProject.classList.add('projectItem');
+
+    const covidTitle = createTitle('COVID-19 US Tracker')
+    const covidImage = createImage("./images/exampleCOVID19.png", "COVID-19 Tracker Page");   
+    const [covidDescription, covidSkills] = createDescription(
+        'A COVID-19 tracker that visualizes the statistics (total positive cases, recoveries, and deaths) of COVID-19 data in the United States provided by the COVID Tracking Project API. ',
+        'Technologies: React, Material-UI, Chart.js, COVID Tracking Project API'
+    );  
+    const covidLinks = createLinks(
+        'https://covid19-us-tracker-visual.herokuapp.com/',
+        'https://github.com/KennethNguyen/COVID19-US-tracker'
+    );
+
+    // Append all Covid project elements to main project div
+    covidProject.append(covidTitle, covidImage, covidDescription, covidSkills, covidLinks)
+
+    // Reddit FMF Script Main Div Element
+    const redditProject = document.createElement('div');
+    redditProject.classList.add('projectItem');
+
+    const redditTitle = createTitle('Reddit FMF Deal Scraper');
+    const redditImage = createImage("./images/exampleScript.png", "Reddit r/frugalmalefashion deal scraper result");
+    const [redditDescription, redditSkills] = createDescription(
+        'A script that scrapes /r/frugalmalefashion for deals and notifies the Reddit user of said deals in a Private Message',
+        'Technologies: Python3, PRAW (Python Reddit API Wrapper)'
+    );
+    const redditLinks = createLinks(
+        '', 
+        'https://github.com/KennethNguyen/reddit-fmf-deal-scraper'
+    );
+
+    // Append all Reddit FMF Script project elements to main project div
+    redditProject.append(redditTitle, redditImage, redditDescription, redditSkills, redditLinks);
+
     // Todo List Project Main Div Element
     const todoProject = document.createElement('div');
     todoProject.classList.add('projectItem');
@@ -23,7 +77,7 @@ const projects = () => {
     const todoImage = createImage('./images/exampleTodo.png', "To-Do App Page");
     const [todoDescription, todoSkills] = createDescription(
         'A todo list for users to add tasks to a list and keep track of which tasks need to be done',
-        'Utilized: React, JavaScript, CSS'
+        'Technologies: React, JavaScript, CSS'
     );
     const todoLinks = createLinks(
         'https://kennethnguyen.github.io/todo-list/',
@@ -41,7 +95,7 @@ const projects = () => {
     const weatherImage = createImage("./images/exampleWeather.png", "Weather App Page");
     const [weatherDescription, weatherSkills] = createDescription(
         'A weather app to determine the weather of any place in the world using OpenWeatherMap API',
-        'Utilized: React, JavaScript, Bootstrap/CSS'
+        'Technologies: React, JavaScript, Bootstrap/CSS'
     );
     const weatherLinks = createLinks(
         'https://kennethnguyen.github.io/weather-app/',
@@ -59,7 +113,7 @@ const projects = () => {
     const libraryImage = createImage("./images/exampleLibrary.png", "Library App Page");
     const [libraryDescription, librarySkills] = createDescription(
         'A library for users to keep track of their books',
-        'Utilized: Utilized: HTML, JavaScript, CSS'
+        'Technologies: HTML, JavaScript, CSS'
     );
     const libraryLinks = createLinks(
         'https://kennethnguyen.github.io/library/',
@@ -69,24 +123,6 @@ const projects = () => {
     // Append all Library project elements to main project div
     libraryProject.append(libraryTitle, libraryImage, libraryDescription, librarySkills, libraryLinks);
 
-    // Reddit FMF Script Main Div Element
-    const redditProject = document.createElement('div');
-    redditProject.classList.add('projectItem');
-
-    const redditTitle = createTitle('Reddit FMF Deal Scraper');
-    const redditImage = createImage("./images/exampleScript.png", "Reddit r/frugalmalefashion deal scraper result");
-    const [redditDescription, redditSkills] = createDescription(
-        'A script that scrapes /r/frugalmalefashion for deals and notifies the Reddit user of said deals in a Private Message',
-        'Utilized: Python3, PRAW (Python Reddit API Wrapper)'
-    );
-    const redditLinks = createLinks(
-        '', 
-        'https://github.com/KennethNguyen/reddit-fmf-deal-scraper'
-    );
-
-    // Append all Reddit FMF Script project elements to main project div
-    redditProject.append(redditTitle, redditImage, redditDescription, redditSkills, redditLinks);
-
     // Tic-Tac-Toe Project Main Div Element
     const ticProject = document.createElement('div');
     ticProject.classList.add('projectItem');
@@ -95,7 +131,7 @@ const projects = () => {
     const ticImage = createImage("./images/exampleTicTacToe.png", "Tic-Tac-Toe App Page");    
     const [ticDescription, ticSkills] = createDescription(
         'A tic-tac-toe game able to play with 2 players',
-        'Utilized: HTML, JavaScript, CSS'
+        'Technologies: HTML, JavaScript, CSS'
     );
     const ticLinks = createLinks(
         'https://kennethnguyen.github.io/tic-tac-toe/',
@@ -113,7 +149,7 @@ const projects = () => {
     const notesImage = createImage("./images/exampleNotes.png", "Notes App Page"); 
     const [notesDescription, notesSkills] = createDescription(
         'A RESTful, full-stack CRUD notes web application',
-        'Utilized: Py4Web, Vue.js, SQLite (through DAL connection), Bulma/CSS'
+        'Technologies: Py4Web, Vue.js, SQLite (through DAL connection), Bulma/CSS'
     );
     const notesLinks = createLinks(
         '',
@@ -123,26 +159,8 @@ const projects = () => {
     // Append all Notes project elements to main project div
     notesProject.append(notesTitle, notesImage, notesDescription, notesSkills, notesLinks)
 
-    // Covid Project Main Div Element
-    const covidProject = document.createElement('div');
-    covidProject.classList.add('projectItem');
-
-    const covidTitle = createTitle('COVID-19 US Tracker')
-    const covidImage = createImage("./images/exampleCOVID19.png", "COVID-19 Tracker Page");   
-    const [covidDescription, covidSkills] = createDescription(
-        'A COVID-19 tracker that visualizes the statistics (total positive cases, recoveries, and deaths) of COVID-19 data in the United States provided by the COVID Tracking Project API. ',
-        'Utilized: React, Material-UI, Chart.js, COVID Tracking Project API'
-    );  
-    const covidLinks = createLinks(
-        'https://covid19-us-tracker-visual.herokuapp.com/',
-        'https://github.com/KennethNguyen/COVID19-US-tracker'
-    );
-
-    // Append all Covid project elements to main project div
-    covidProject.append(covidTitle, covidImage, covidDescription, covidSkills, covidLinks)
-
     // Append all project elements to the flexbox
-    projectsFlexContainer.append(covidProject, redditProject, todoProject, weatherProject, libraryProject, ticProject, notesProject);
+    projectsFlexContainer.append(frydgeProject, covidProject, redditProject, todoProject, weatherProject, libraryProject, ticProject, notesProject);
 
     projectsSection.append(sectionTitle, projectsFlexContainer);
 

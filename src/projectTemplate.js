@@ -41,7 +41,13 @@ const createLinks = (projectDemo, projectSource) => {
     
     const sourceCode = createLinksHelper(projectSource, 'Source Code', 'projectCodeButton');
 
-    linksContainer.append(demo, sourceCode);
+    if (!projectDemo) {
+        linksContainer.append(sourceCode)
+    } else if (!projectSource) {
+        linksContainer.append(demo)
+    } else {
+        linksContainer.append(demo, sourceCode);
+    }
 
     return linksContainer;
 }
